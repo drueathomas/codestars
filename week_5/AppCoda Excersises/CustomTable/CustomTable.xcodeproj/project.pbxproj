@@ -15,6 +15,7 @@
 		E357CFAC1BA49A1A00C50D8E /* CustomTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E357CFAB1BA49A1A00C50D8E /* CustomTableTests.m */; };
 		E357CFB71BA49B8F00C50D8E /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E357CFB61BA49B8F00C50D8E /* CustomTableViewController.m */; };
 		E357CFBA1BA4AA1100C50D8E /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E357CFB91BA4AA1100C50D8E /* CustomTableViewCell.m */; };
+		E357CFC01BA4CD7C00C50D8E /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = E357CFBF1BA4CD7C00C50D8E /* recipes.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		E357CFB61BA49B8F00C50D8E /* CustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
 		E357CFB81BA4AA1100C50D8E /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		E357CFB91BA4AA1100C50D8E /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E357CFBF1BA4CD7C00C50D8E /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E357CFB91BA4AA1100C50D8E /* CustomTableViewCell.m */,
 				E357CF9C1BA49A1A00C50D8E /* Images.xcassets */,
 				E357CF9E1BA49A1A00C50D8E /* LaunchScreen.xib */,
+				E357CFBF1BA4CD7C00C50D8E /* recipes.plist */,
 				E357CF8F1BA49A1A00C50D8E /* Supporting Files */,
 			);
 			path = CustomTable;
@@ -206,6 +209,7 @@
 			files = (
 				E357CF9B1BA49A1A00C50D8E /* Main.storyboard in Resources */,
 				E357CFA01BA49A1A00C50D8E /* LaunchScreen.xib in Resources */,
+				E357CFC01BA4CD7C00C50D8E /* recipes.plist in Resources */,
 				E357CF9D1BA49A1A00C50D8E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +426,7 @@
 				E357CFB11BA49A1A00C50D8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E357CFB21BA49A1A00C50D8E /* Build configuration list for PBXNativeTarget "CustomTableTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				E357CFB41BA49A1A00C50D8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
