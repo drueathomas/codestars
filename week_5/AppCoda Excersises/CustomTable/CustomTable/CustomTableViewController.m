@@ -114,6 +114,12 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:
 (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Remove the row from data model
+    [recipeNames removeObjectAtIndex:indexPath.row];
+    [recipeImages removeObjectAtIndex:indexPath.row];
+    [prepTime removeObjectAtIndex:indexPath.row];
+    // Request table view to reload
+    [tableView reloadData];
 }
 
 
