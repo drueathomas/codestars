@@ -7,13 +7,13 @@
 //test
 //
 
-#import "CustomTableViewController.h"
+#import "TableViewController.h"
 
-@interface CustomTableViewController ()
+@interface TableViewController ()
 
 @end
 
-@implementation CustomTableViewController
+@implementation TableViewController
 
 {
     NSMutableArray *dogs;
@@ -36,7 +36,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

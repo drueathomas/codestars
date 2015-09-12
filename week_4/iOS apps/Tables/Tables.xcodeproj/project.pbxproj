@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		E300B19D1B93869D005D17ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E300B19C1B93869D005D17ED /* main.m */; };
 		E300B1A01B93869D005D17ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E300B19F1B93869D005D17ED /* AppDelegate.m */; };
-		E300B1A31B93869D005D17ED /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E300B1A21B93869D005D17ED /* CustomTableViewController.m */; };
-		E300B1A61B93869D005D17ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E300B1A41B93869D005D17ED /* Main.storyboard */; };
+		E300B1A31B93869D005D17ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E300B1A21B93869D005D17ED /* TableViewController.m */; };
 		E300B1A81B93869D005D17ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E300B1A71B93869D005D17ED /* Images.xcassets */; };
 		E300B1AB1B93869E005D17ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E300B1A91B93869E005D17ED /* LaunchScreen.xib */; };
 		E300B1B71B93869E005D17ED /* TablesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E300B1B61B93869E005D17ED /* TablesTests.m */; };
+		E300B1C31B939D01005D17ED /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E300B1C21B939D01005D17ED /* Main.Storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		E300B19C1B93869D005D17ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E300B19E1B93869D005D17ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E300B19F1B93869D005D17ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E300B1A11B93869D005D17ED /* CustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewController.h; sourceTree = "<group>"; };
-		E300B1A21B93869D005D17ED /* CustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
-		E300B1A51B93869D005D17ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E300B1A11B93869D005D17ED /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E300B1A21B93869D005D17ED /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		E300B1A71B93869D005D17ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E300B1AA1B93869E005D17ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E300B1B01B93869E005D17ED /* TablesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TablesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E300B1B51B93869E005D17ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E300B1B61B93869E005D17ED /* TablesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TablesTests.m; sourceTree = "<group>"; };
+		E300B1C21B939D01005D17ED /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.Storyboard; path = ../Main.Storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +83,10 @@
 			children = (
 				E300B19E1B93869D005D17ED /* AppDelegate.h */,
 				E300B19F1B93869D005D17ED /* AppDelegate.m */,
-				E300B1A11B93869D005D17ED /* CustomTableViewController.h */,
-				E300B1A21B93869D005D17ED /* CustomTableViewController.m */,
-				E300B1A41B93869D005D17ED /* Main.storyboard */,
+				E300B1A11B93869D005D17ED /* TableViewController.h */,
+				E300B1A21B93869D005D17ED /* TableViewController.m */,
 				E300B1A71B93869D005D17ED /* Images.xcassets */,
+				E300B1C21B939D01005D17ED /* Main.Storyboard */,
 				E300B1A91B93869E005D17ED /* LaunchScreen.xib */,
 				E300B19A1B93869D005D17ED /* Supporting Files */,
 			);
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E300B1A61B93869D005D17ED /* Main.storyboard in Resources */,
+				E300B1C31B939D01005D17ED /* Main.Storyboard in Resources */,
 				E300B1AB1B93869E005D17ED /* LaunchScreen.xib in Resources */,
 				E300B1A81B93869D005D17ED /* Images.xcassets in Resources */,
 			);
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E300B1A31B93869D005D17ED /* CustomTableViewController.m in Sources */,
+				E300B1A31B93869D005D17ED /* TableViewController.m in Sources */,
 				E300B1A01B93869D005D17ED /* AppDelegate.m in Sources */,
 				E300B19D1B93869D005D17ED /* main.m in Sources */,
 			);
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E300B1A41B93869D005D17ED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E300B1A51B93869D005D17ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E300B1A91B93869E005D17ED /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

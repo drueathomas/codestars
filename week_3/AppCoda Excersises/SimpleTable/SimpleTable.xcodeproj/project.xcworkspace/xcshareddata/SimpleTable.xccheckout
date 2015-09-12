@@ -7,17 +7,17 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>34D0760A-7EE8-4563-8D9E-56043D6ABA5D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SimpleTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4F5ABB16FB67D673B768B41A834946CE060201A5</key>
+		<key>7E1A8D381ACDC903E3A618CF06D923814674FAA2</key>
 		<string>https://github.com/druesclues/codestars.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>week_3/AppCoda Excersises/SimpleTable/SimpleTable.xcodeproj/project.xcworkspace</string>
+	<string>week_3/AppCoda Excersises/SimpleTable/SimpleTable.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4F5ABB16FB67D673B768B41A834946CE060201A5</key>
+		<key>7E1A8D381ACDC903E3A618CF06D923814674FAA2</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4F5ABB16FB67D673B768B41A834946CE060201A5</string>
+	<string>7E1A8D381ACDC903E3A618CF06D923814674FAA2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4F5ABB16FB67D673B768B41A834946CE060201A5</string>
+			<string>7E1A8D381ACDC903E3A618CF06D923814674FAA2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>codestars</string>
 		</dict>
