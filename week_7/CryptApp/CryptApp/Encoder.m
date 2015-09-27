@@ -90,5 +90,10 @@
     
 }
 
+- (void) encodeUserInput {
+    
+    
+    }
+
 @end
 

@@ -1,47 +1,173 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cXp-Y5-uXP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hp0-Xm-ZSs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Crypt Table View Controller-->
-        <scene sceneID="MMY-zb-RHR">
+        <!--Home View Controller-->
+        <scene sceneID="vI0-6d-lwm">
             <objects>
-                <tableViewController id="cXp-Y5-uXP" customClass="CryptTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cMR-ye-yds">
+                <viewController id="hp0-Xm-ZSs" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U35-SU-JAm"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBK-MB-IB9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yjW-xP-zi5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Crypt!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-kP-IRW">
+                                <rect key="frame" x="84" y="69" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-5Q-mU1">
+                                <rect key="frame" x="86" y="349" width="148" height="30"/>
+                                <state key="normal" title="Generate New Cipher"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
+                                <rect key="frame" x="40" y="181" width="240" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0U-C4-P1I">
+                                <rect key="frame" x="53" y="125" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-pn-NBF">
+                                <rect key="frame" x="53" y="125" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Mi2-Xw-nJm" style="IBUITableViewCellStyleDefault" id="4C6-ny-bK9">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4C6-ny-bK9" id="ptw-KY-EVH">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mi2-Xw-nJm">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="cXp-Y5-uXP" id="0X5-XJ-CX0"/>
-                            <outlet property="delegate" destination="cXp-Y5-uXP" id="NTw-Jm-MdY"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2KU-1K-yvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="cBK-MB-IB9" firstAttribute="top" secondItem="Taf-5Q-mU1" secondAttribute="bottom" constant="189" id="0rP-87-83S"/>
+                            <constraint firstItem="XWk-kP-IRW" firstAttribute="top" secondItem="U35-SU-JAm" secondAttribute="bottom" constant="49" id="16t-Wv-j1y"/>
+                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="top" secondItem="JsG-M2-QC8" secondAttribute="bottom" constant="40" id="2hk-61-Sfd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JsG-M2-QC8" secondAttribute="trailing" constant="20" id="5U3-Qe-Tjb"/>
+                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="33" id="D8X-DP-T2q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xvu-pn-NBF" secondAttribute="trailing" constant="33" id="FQx-Hb-5Pe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XWk-kP-IRW" secondAttribute="trailing" constant="73" id="HNc-hx-C9r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Taf-5Q-mU1" secondAttribute="trailing" constant="66" id="Qfb-rw-sVT"/>
+                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="66" id="XS5-fb-LhK"/>
+                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="top" secondItem="XWk-kP-IRW" secondAttribute="bottom" constant="49" id="dBq-85-eis"/>
+                            <constraint firstItem="JsG-M2-QC8" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="20" id="jJ8-Yc-B21"/>
+                            <constraint firstItem="XWk-kP-IRW" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="73" id="qCO-wE-Ied"/>
+                            <constraint firstItem="JsG-M2-QC8" firstAttribute="top" secondItem="Xvu-pn-NBF" secondAttribute="bottom" constant="21" id="vaE-oB-84I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generateCipherButton" destination="Taf-5Q-mU1" id="Yns-nL-t5J"/>
+                        <outlet property="instructions" destination="k0U-C4-P1I" id="E89-ef-yvf"/>
+                        <outlet property="textToEncode" destination="JsG-M2-QC8" id="QBU-oU-OP1"/>
+                        <outlet property="welcomeText" destination="XWk-kP-IRW" id="Jju-8N-Bax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVY-eT-cAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="376"/>
+            <point key="canvasLocation" x="739" y="453"/>
+        </scene>
+        <!--Encoded Text View Controller-->
+        <scene sceneID="68D-am-ogl">
+            <objects>
+                <viewController id="t8d-Lo-bS5" customClass="EncodedTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1dL-Nc-Akd"/>
+                        <viewControllerLayoutGuide type="bottom" id="WK3-eS-CWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xkt-WE-sKu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Encoded Text Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-id-GKT">
+                                <rect key="frame" x="30" y="83" width="270" height="166"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
+                                <rect key="frame" x="142" y="269" width="36" height="30"/>
+                                <state key="normal" title="Copy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlP-hZ-IzR">
+                                <rect key="frame" x="124" y="328" width="83" height="30"/>
+                                <state key="normal" title="Save Cipher"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jlP-hZ-IzR" firstAttribute="top" secondItem="ODX-GG-aV3" secondAttribute="bottom" constant="29" id="6Xo-uK-Vm7"/>
+                            <constraint firstItem="ODX-GG-aV3" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="122" id="Adh-Te-qOY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jlP-hZ-IzR" secondAttribute="trailing" constant="93" id="U5W-62-FGs"/>
+                            <constraint firstItem="2Wh-id-GKT" firstAttribute="top" secondItem="1dL-Nc-Akd" secondAttribute="bottom" constant="63" id="bKL-cD-20v"/>
+                            <constraint firstItem="WK3-eS-CWj" firstAttribute="top" secondItem="jlP-hZ-IzR" secondAttribute="bottom" constant="210" id="bLf-Oj-cGo"/>
+                            <constraint firstItem="2Wh-id-GKT" firstAttribute="trailing" secondItem="xkt-WE-sKu" secondAttribute="trailingMargin" id="cXH-KQ-E2f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ODX-GG-aV3" secondAttribute="trailing" constant="122" id="kRj-sh-IXw"/>
+                            <constraint firstItem="2Wh-id-GKT" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="10" id="lIn-U2-SkG"/>
+                            <constraint firstItem="jlP-hZ-IzR" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="104" id="mek-Du-3At"/>
+                            <constraint firstItem="ODX-GG-aV3" firstAttribute="top" secondItem="2Wh-id-GKT" secondAttribute="bottom" constant="20" id="ubL-Qi-oaY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyButton" destination="ODX-GG-aV3" id="O8I-or-kQ8"/>
+                        <outlet property="copyTextButton" destination="ODX-GG-aV3" id="z4S-7B-kOR"/>
+                        <outlet property="encodedText" destination="2Wh-id-GKT" id="J1A-xQ-ubf"/>
+                        <outlet property="saveCipherButton" destination="jlP-hZ-IzR" id="OEI-Pp-NYl"/>
+                        <outlet property="textCopyButton" destination="ODX-GG-aV3" id="fTd-Fx-BuL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRb-yg-qXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="453"/>
+        </scene>
+        <!--Save Cipher View Controller-->
+        <scene sceneID="OGV-QT-fNu">
+            <objects>
+                <viewController id="UrX-lq-L3V" customClass="SaveCipherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qo-zK-AGB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vs1-lS-Tne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8KI-hv-tzb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cipher Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-t5-cel">
+                                <rect key="frame" x="50" y="218" width="236" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-aN-GQp">
+                                <rect key="frame" x="151" y="319" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vs1-lS-Tne" firstAttribute="top" secondItem="tAd-aN-GQp" secondAttribute="bottom" constant="219" id="6Oa-fT-WMt"/>
+                            <constraint firstItem="tAd-aN-GQp" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="131" id="8UY-0k-7gI"/>
+                            <constraint firstItem="bpD-t5-cel" firstAttribute="top" secondItem="8qo-zK-AGB" secondAttribute="bottom" constant="198" id="EVh-bK-lDv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpD-t5-cel" secondAttribute="trailing" constant="14" id="L9Z-Mp-K7a"/>
+                            <constraint firstItem="tAd-aN-GQp" firstAttribute="top" secondItem="bpD-t5-cel" secondAttribute="bottom" constant="71" id="Tv2-Zv-fc3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tAd-aN-GQp" secondAttribute="trailing" constant="115" id="c0a-Cr-hsR"/>
+                            <constraint firstItem="bpD-t5-cel" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="30" id="hLO-u9-w6n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cipherName" destination="bpD-t5-cel" id="xKT-kN-iCZ"/>
+                        <outlet property="cipherSaveButton" destination="tAd-aN-GQp" id="Wi2-uf-nRO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVo-WC-1hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="453"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

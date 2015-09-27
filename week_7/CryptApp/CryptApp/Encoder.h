@@ -24,7 +24,6 @@
 
 //methods
 
-
 - (void) generateStandardAlphabet;
 - (void) generateCipher;
 - (void) generateRandomNumberSet;
@@ -33,6 +32,8 @@
 - (void) cipherkeysToChars;
 - (NSString *) arrayToString : (NSArray *) array;
 
+//
+- (void) encodeUserInput;
 
 
 

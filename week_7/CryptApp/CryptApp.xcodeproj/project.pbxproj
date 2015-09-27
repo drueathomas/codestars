@@ -15,6 +15,9 @@
 		E307E4391BADF2D200FF1979 /* CryptAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4381BADF2D200FF1979 /* CryptAppTests.m */; };
 		E307E4441BADF70900FF1979 /* CryptTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4431BADF70900FF1979 /* CryptTableViewController.m */; };
 		E307E4471BADFB5200FF1979 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4461BADFB5200FF1979 /* Encoder.m */; };
+		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E389F9F31BB8999100EA96A6 /* EncodedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9F21BB8999100EA96A6 /* EncodedTextViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E389F9F61BB899A300EA96A6 /* SaveCipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9F51BB899A300EA96A6 /* SaveCipherViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		E307E4431BADF70900FF1979 /* CryptTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptTableViewController.m; sourceTree = "<group>"; };
 		E307E4451BADFB5200FF1979 /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
 		E307E4461BADFB5200FF1979 /* Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encoder.m; sourceTree = "<group>"; };
+		E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E389F9F11BB8999100EA96A6 /* EncodedTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodedTextViewController.h; sourceTree = "<group>"; };
+		E389F9F21BB8999100EA96A6 /* EncodedTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodedTextViewController.m; sourceTree = "<group>"; };
+		E389F9F41BB899A200EA96A6 /* SaveCipherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveCipherViewController.h; sourceTree = "<group>"; };
+		E389F9F51BB899A300EA96A6 /* SaveCipherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveCipherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +97,12 @@
 				E307E4211BADF2D200FF1979 /* AppDelegate.m */,
 				E307E4421BADF70900FF1979 /* CryptTableViewController.h */,
 				E307E4431BADF70900FF1979 /* CryptTableViewController.m */,
+				E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */,
+				E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */,
+				E389F9F11BB8999100EA96A6 /* EncodedTextViewController.h */,
+				E389F9F21BB8999100EA96A6 /* EncodedTextViewController.m */,
+				E389F9F41BB899A200EA96A6 /* SaveCipherViewController.h */,
+				E389F9F51BB899A300EA96A6 /* SaveCipherViewController.m */,
 				E307E4451BADFB5200FF1979 /* Encoder.h */,
 				E307E4461BADFB5200FF1979 /* Encoder.m */,
 				E307E4261BADF2D200FF1979 /* Main.storyboard */,
@@ -225,8 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E307E4471BADFB5200FF1979 /* Encoder.m in Sources */,
+				E389F9F31BB8999100EA96A6 /* EncodedTextViewController.m in Sources */,
 				E307E4441BADF70900FF1979 /* CryptTableViewController.m in Sources */,
 				E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */,
+				E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */,
+				E389F9F61BB899A300EA96A6 /* SaveCipherViewController.m in Sources */,
 				E307E41F1BADF2D200FF1979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +440,7 @@
 				E307E43E1BADF2D200FF1979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E307E43F1BADF2D200FF1979 /* Build configuration list for PBXNativeTarget "CryptAppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +449,7 @@
 				E307E4411BADF2D200FF1979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
