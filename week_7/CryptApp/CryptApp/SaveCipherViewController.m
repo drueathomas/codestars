@@ -34,4 +34,21 @@
 }
 */
 
+
+// This method is called once we click inside the textField
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"Text field did begin editing");
+}
+
+// This method is called once we complete editing
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"Text field ended editing");
+}
+
+// This method enables or disables the processing of return key
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end

@@ -18,6 +18,7 @@
 		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E389F9F31BB8999100EA96A6 /* EncodedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9F21BB8999100EA96A6 /* EncodedTextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E389F9F61BB899A300EA96A6 /* SaveCipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9F51BB899A300EA96A6 /* SaveCipherViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E389F9F91BB9E38B00EA96A6 /* CipherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9F81BB9E38B00EA96A6 /* CipherTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		E389F9F21BB8999100EA96A6 /* EncodedTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodedTextViewController.m; sourceTree = "<group>"; };
 		E389F9F41BB899A200EA96A6 /* SaveCipherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveCipherViewController.h; sourceTree = "<group>"; };
 		E389F9F51BB899A300EA96A6 /* SaveCipherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveCipherViewController.m; sourceTree = "<group>"; };
+		E389F9F71BB9E38B00EA96A6 /* CipherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherTableViewCell.h; sourceTree = "<group>"; };
+		E389F9F81BB9E38B00EA96A6 /* CipherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				E307E4451BADFB5200FF1979 /* Encoder.h */,
 				E307E4461BADFB5200FF1979 /* Encoder.m */,
 				E307E4261BADF2D200FF1979 /* Main.storyboard */,
+				E389F9F71BB9E38B00EA96A6 /* CipherTableViewCell.h */,
+				E389F9F81BB9E38B00EA96A6 /* CipherTableViewCell.m */,
 				E307E4291BADF2D200FF1979 /* Images.xcassets */,
 				E307E42B1BADF2D200FF1979 /* LaunchScreen.xib */,
 				E307E41C1BADF2D100FF1979 /* Supporting Files */,
@@ -245,6 +250,7 @@
 				E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */,
 				E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */,
 				E389F9F61BB899A300EA96A6 /* SaveCipherViewController.m in Sources */,
+				E389F9F91BB9E38B00EA96A6 /* CipherTableViewCell.m in Sources */,
 				E307E41F1BADF2D200FF1979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

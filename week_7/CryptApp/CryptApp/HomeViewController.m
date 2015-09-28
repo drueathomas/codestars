@@ -13,25 +13,35 @@
 @end
 
 @implementation HomeViewController
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    //The custom method to create our textfield is called
+   }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+// pragma mark is used for easy access of code in Xcode
+#pragma mark - TextField Delegates
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// This method is called once we click inside the textField
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"Text field did begin editing");
 }
-*/
+
+// This method is called once we complete editing
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"Text field ended editing");
+}
+
+// This method enables or disables the processing of return key
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end
