@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary* standardAlphabet;
 @property (nonatomic, strong) NSMutableDictionary* cipher;
-@property (nonatomic, strong) NSMutableDictionary* activeCiphers;
+@property (nonatomic, strong) NSMutableArray* activeCiphers;
 
 
 @property (nonatomic, strong) NSMutableArray* charsToKeys;
@@ -31,6 +31,8 @@
 - (void) charsToCipherKeys;
 - (void) cipherkeysToChars;
 - (NSString *) arrayToString : (NSArray *) array;
+
+
 
 //
 - (void) encodeUserInput;

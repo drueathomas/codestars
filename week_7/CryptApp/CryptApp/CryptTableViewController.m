@@ -7,16 +7,26 @@
 //
 
 #import "CryptTableViewController.h"
-#import "Encoder.h";
+#import "Encoder.h"
+#import "CipherTableViewCell.h"
 
 @interface CryptTableViewController ()
 
 @end
 
 @implementation CryptTableViewController
+{
+    NSMutableArray *cipherName;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.activeCiphers = [[NSMutableArray alloc]init];
+    
+    //initialize table data
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -35,24 +45,51 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return [cipherName count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //create a variable to store the cell identifier
+    static NSString *CellIdentifier = @"Cell";
+    
+    //create a cell for the data
+    CipherTableViewCell *cell =  (CipherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    //if the cell is empty, alloc an instance of the custom cell class and init with the UITable View style
+    if (cell == nil) {
+        cell = [[CipherTableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
     
+    NSMutableDictionary *d = (NSMutableDictionary*)[self. objectAtIndex:indexPath.row];
+    
+    cell.cipherLabel.text =[d valueForKey:@"Name"];
+    
+    //If there is data in cipherName, 
+    if (cipherName != nil) {
+        NSLog(@"%ld", (long)indexPath.row);
+        cell.cipherLabel.text = [cipherName objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        NSLog(@"No cells!");
+        [cell.cipherLabel setText:@"No Ciphers Stored"];
+    }
+    
+    cell.cipherThumbnail.image = [UIImage imageNamed:@"Key-50.png"];
+    
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

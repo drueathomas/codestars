@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="JFY-ts-vqs">
             <objects>
                 <viewController id="xF8-eE-TNo" sceneMemberID="viewController">
@@ -21,14 +21,18 @@
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrk-gQ-wkl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xF8-eE-TNo" id="TKu-sL-8vG"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="About" id="oYy-gj-4bO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0C-Xa-kKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="-292"/>
+            <point key="canvasLocation" x="1271" y="-222"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="vI0-6d-lwm">
@@ -99,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="1271" y="453"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ciphers-->
         <scene sceneID="GWw-tg-vct">
             <objects>
                 <tableViewController id="8VE-BM-8yv" sceneMemberID="viewController">
@@ -127,8 +131,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cipherLabel" destination="whK-9x-NIh" id="Ea2-jF-qVB"/>
                                     <outlet property="cipherName" destination="whK-9x-NIh" id="HNd-mJ-b1m"/>
                                     <outlet property="cipherThumbnail" destination="Bd7-Ga-yQf" id="eKH-So-6lT"/>
+                                    <outlet property="textLabel" destination="whK-9x-NIh" id="RaI-Vu-WdR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -137,10 +143,11 @@
                             <outlet property="delegate" destination="8VE-BM-8yv" id="3I0-cN-zPY"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Ciphers" id="eJJ-Yb-t5K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-Dz-dNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="1103"/>
+            <point key="canvasLocation" x="1271" y="1239"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fVg-0Z-e6d">
@@ -356,6 +363,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="hp0-Xm-ZSs" kind="relationship" relationship="viewControllers" id="bCc-3H-hyz"/>
+                        <segue destination="8VE-BM-8yv" kind="relationship" relationship="viewControllers" id="JOR-cm-Ekt"/>
+                        <segue destination="xF8-eE-TNo" kind="relationship" relationship="viewControllers" id="rr0-rJ-G9a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c2-HX-NoY" userLabel="First Responder" sceneMemberID="firstResponder"/>

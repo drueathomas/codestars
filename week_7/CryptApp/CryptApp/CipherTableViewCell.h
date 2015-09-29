@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CipherTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *cipherThumbnail;
-@property (weak, nonatomic) IBOutlet UILabel *cipherName;
+@property (weak, nonatomic) IBOutlet UIImageView *cipherThumbnail;
+@property (weak, nonatomic) IBOutlet UILabel *cipherLabel;
 
 @end
