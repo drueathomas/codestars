@@ -13,33 +13,27 @@
 @property (nonatomic, strong) NSMutableDictionary* standardAlphabet;
 @property (nonatomic, strong) NSMutableDictionary* cipher;
 @property (nonatomic, strong) NSMutableArray* activeCiphers;
-
-
 @property (nonatomic, strong) NSMutableArray* charsToKeys;
 @property (nonatomic, strong) NSMutableArray* userInputChars;
 @property (nonatomic, strong) NSMutableArray* exclude;
 @property (nonatomic, strong) NSMutableArray* keysToChars;
-@property (nonatomic, strong) NSString* userInput;
 @property (nonatomic) NSInteger topOfRange;
+@property (nonatomic, strong) NSString * encodedText;
+@property (nonatomic, strong) NSArray *alphabet;
 
 //methods
 
 - (void) generateStandardAlphabet;
-- (void) generateCipher;
 - (void) generateRandomNumberSet;
-- (void) userInputToChars;
+- (void) generateCipher;
+
+- (void) userInputToChars : (NSString *) userInput;
 - (void) charsToCipherKeys;
 - (void) cipherkeysToChars;
-- (NSString *) arrayToString : (NSArray *) array;
+- (NSString *) arrayToString;
 
-
-
-//
-- (void) encodeUserInput;
-
-
-
-
+//encoding use input package
+- (NSString *) encodeUserInput : (Encoder *) encode : (NSString *) userInput;
 
 
 @end

@@ -8,61 +8,78 @@
 
 #import "Encoder.h"
 
+
 @implementation Encoder
 
 - (void) generateStandardAlphabet {
     self.standardAlphabet = [NSMutableDictionary dictionary];
     
-    NSArray *alphabet = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",@"i",@"j",@"k",@"l",@"m",@"n",@"o",@"p",@"q",@"r",@"s",@"t",@"u",@"v",@"w",@"x",@"y",@"z",nil];
+    self.alphabet = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",@"i",@"j",@"k",@"l",@"m",@"n",@"o",@"p",@"q",@"r",@"s",@"t",@"u",@"v",@"w",@"x",@"y",@"z",nil];
     
     NSInteger index = 0;
     
-    for(NSString *character in alphabet)
+    for(NSString *character in self.alphabet)
     {
-        index ++;
+        
         [self.standardAlphabet setObject:character forKey:[NSNumber numberWithInteger:index]];
+        index ++;
     }
+    
+    NSLog(@"STANDARD: %@", self.standardAlphabet);
 }
 
 -(void) generateRandomNumberSet {
+    self.topOfRange = 26;
+    
     self.exclude = [NSMutableArray array];
     
-    NSNumber *aRandom = [NSNumber numberWithUnsignedInt:arc4random_uniform(self.topOfRange)];
+    int counter = 0;
     
-    while ([self.exclude containsObject:aRandom])
-    {
+    while (counter < self.topOfRange) {
+        NSNumber *aRandom = [NSNumber numberWithUnsignedInt:(arc4random_uniform(self.topOfRange))];
         
-        NSNumber *aRandom = [NSNumber numberWithUnsignedInt:arc4random_uniform(self.topOfRange)];
-        [self.exclude addObject:aRandom];
-        
-    }
+        if (![self.exclude containsObject:aRandom]) {
+            [self.exclude addObject:(aRandom)];
+            counter++;
+    
+    NSLog(@" EXCLUDE: %@", self.exclude);
     
 }
-
+    }
+}
 
 - (void) generateCipher {
     
-    NSInteger counter = 0;
-    NSInteger index = [self.userInputChars objectAtIndex:counter];
+    self.cipher = [NSMutableDictionary dictionary];
     
-    NSArray *alphabet = [NSArray arrayWithObjects:[self.standardAlphabet allValues], nil];
+    NSLog(@"EXCLUDE: %@", self.exclude);
+
+    NSLog(@"alphabet : %@", self.alphabet);
     
-    for (NSString *character in alphabet)
+    
+    NSLog(@"A0: %@",[self.alphabet objectAtIndex:0]);
+    NSLog(@"E0: %@",[self.exclude objectAtIndex:0]);
+
+    
+    for (NSInteger counter = 0; counter < [self.alphabet count]; counter ++)
     {
-        [self.cipher setObject:character forKey:[NSNumber numberWithInteger:index]];
-        counter++;
-        index = [self.exclude objectAtIndex:counter];
         
-    }
+        [self.cipher setObject:[self.alphabet objectAtIndex:counter] forKey:[self.exclude objectAtIndex:counter]];
+     
+     }
+    
+    NSLog(@"%@", self.cipher);
 }
 
-- (void) userInputToChars {
+- (void) userInputToChars : (NSString *) userInput {
     
-    self.userInputChars = [[NSMutableArray alloc] initWithCapacity:[self.userInput length]];
-    for (int i=0; i < [self.userInput length]; i++) {
-        NSString *ichar  = [NSString stringWithFormat:@"%c", [self.userInput characterAtIndex:i]];
+    self.userInputChars = [[NSMutableArray alloc] initWithCapacity:[userInput length]];
+    for (int i=0; i < [userInput length]; i++) {
+        NSString *ichar  = [NSString stringWithFormat:@"%c", [userInput characterAtIndex:i]];
         [self.userInputChars addObject:ichar];
     }
+    
+    NSLog(@"%@", self.userInputChars);
 }
 
 - (void) charsToCipherKeys {
@@ -74,6 +91,7 @@
         [self.charsToKeys addObjectsFromArray:[self.cipher valueForKey:[NSString stringWithFormat:@"%@", character]]];
         
     }
+    NSLog(@"%@", self.userInputChars);
 }
 - (void) cipherKeysToChars {
     
@@ -82,16 +100,30 @@
         [self.charsToKeys addObjectsFromArray:[self.cipher allKeysForObject:[NSString stringWithFormat:@"%@", key]]];
     
     }
+    NSLog(@"%@", self.charsToKeys);
 }
 
-- (NSString *) arrayToString : (NSArray *) array{
-    NSString* results = [[array valueForKey: @"description"] componentsSeparatedByString:@" "];
+- (NSString *) arrayToString {
+    NSString* results = [[self.charsToKeys valueForKey: @"description"] componentsSeparatedByString:@" "];
+    NSLog(@"%@", results);
     return results;
-    
 }
 
-- (void) encodeUserInput {
+- (NSString *) encodeUserInput : (Encoder *) encode : (NSString *) userInput {
     
+    [encode userInputToChars: userInput];
+    
+    [encode charsToCipherKeys];
+    
+    [encode cipherKeysToChars];
+    
+    NSString *result = [encode arrayToString];
+    
+    return result;
+    
+    NSLog(@"%@", result);
+    
+
     
     }
 
