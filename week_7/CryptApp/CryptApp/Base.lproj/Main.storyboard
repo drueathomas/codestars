@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -55,18 +54,15 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-5Q-mU1">
                                 <rect key="frame" x="86" y="349" width="148" height="30"/>
                                 <state key="normal" title="Generate New Cipher"/>
+                                <connections>
+                                    <segue destination="t8d-Lo-bS5" kind="push" identifier="showEncodedText" id="ETK-Ml-WXv"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
                                 <rect key="frame" x="40" y="181" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0U-C4-P1I">
-                                <rect key="frame" x="53" y="125" width="214" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-pn-NBF">
                                 <rect key="frame" x="53" y="125" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -94,7 +90,6 @@
                     <tabBarItem key="tabBarItem" systemItem="featured" id="alp-9M-5j9"/>
                     <connections>
                         <outlet property="generateCipherButton" destination="Taf-5Q-mU1" id="Yns-nL-t5J"/>
-                        <outlet property="instructions" destination="k0U-C4-P1I" id="E89-ef-yvf"/>
                         <outlet property="textToEncode" destination="JsG-M2-QC8" id="QBU-oU-OP1"/>
                         <outlet property="welcomeText" destination="XWk-kP-IRW" id="Jju-8N-Bax"/>
                     </connections>
@@ -269,39 +264,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Encoded Text Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-id-GKT">
-                                <rect key="frame" x="30" y="83" width="270" height="166"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
-                                <rect key="frame" x="142" y="269" width="36" height="30"/>
+                                <rect key="frame" x="142" y="269" width="45" height="30"/>
                                 <state key="normal" title="Copy"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlP-hZ-IzR">
                                 <rect key="frame" x="124" y="328" width="83" height="30"/>
                                 <state key="normal" title="Save Cipher"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
+                                <rect key="frame" x="145" y="130" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jlP-hZ-IzR" firstAttribute="top" secondItem="ODX-GG-aV3" secondAttribute="bottom" constant="29" id="6Xo-uK-Vm7"/>
                             <constraint firstItem="ODX-GG-aV3" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="122" id="Adh-Te-qOY"/>
+                            <constraint firstItem="ODX-GG-aV3" firstAttribute="top" secondItem="Fsy-yn-Gep" secondAttribute="bottom" constant="118" id="Mg1-4Y-RRk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jlP-hZ-IzR" secondAttribute="trailing" constant="93" id="U5W-62-FGs"/>
-                            <constraint firstItem="2Wh-id-GKT" firstAttribute="top" secondItem="1dL-Nc-Akd" secondAttribute="bottom" constant="63" id="bKL-cD-20v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fsy-yn-Gep" secondAttribute="trailing" constant="117" id="bAN-Q3-mQD"/>
                             <constraint firstItem="WK3-eS-CWj" firstAttribute="top" secondItem="jlP-hZ-IzR" secondAttribute="bottom" constant="210" id="bLf-Oj-cGo"/>
-                            <constraint firstItem="2Wh-id-GKT" firstAttribute="trailing" secondItem="xkt-WE-sKu" secondAttribute="trailingMargin" id="cXH-KQ-E2f"/>
+                            <constraint firstItem="Fsy-yn-Gep" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="129" id="bS2-7H-gsG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ODX-GG-aV3" secondAttribute="trailing" constant="122" id="kRj-sh-IXw"/>
-                            <constraint firstItem="2Wh-id-GKT" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="10" id="lIn-U2-SkG"/>
+                            <constraint firstItem="Fsy-yn-Gep" firstAttribute="top" secondItem="1dL-Nc-Akd" secondAttribute="bottom" constant="110" id="lDX-F2-1gI"/>
                             <constraint firstItem="jlP-hZ-IzR" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="104" id="mek-Du-3At"/>
-                            <constraint firstItem="ODX-GG-aV3" firstAttribute="top" secondItem="2Wh-id-GKT" secondAttribute="bottom" constant="20" id="ubL-Qi-oaY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6Sj-tT-QY4"/>
                     <connections>
+                        <outlet property="cipherCopyButton" destination="ODX-GG-aV3" id="Rna-En-Dej"/>
+                        <outlet property="cipherSaveButton" destination="jlP-hZ-IzR" id="IFg-eg-eDk"/>
+                        <outlet property="copy" destination="ODX-GG-aV3" id="uc5-dh-uye"/>
                         <outlet property="copyButton" destination="ODX-GG-aV3" id="O8I-or-kQ8"/>
-                        <outlet property="copyTextButton" destination="ODX-GG-aV3" id="z4S-7B-kOR"/>
-                        <outlet property="encodedText" destination="2Wh-id-GKT" id="J1A-xQ-ubf"/>
+                        <outlet property="copyTextButton" destination="ODX-GG-aV3" id="vXd-eE-j3U"/>
+                        <outlet property="encodedTextLabel" destination="Fsy-yn-Gep" id="KXS-4f-hvC"/>
                         <outlet property="saveCipherButton" destination="jlP-hZ-IzR" id="OEI-Pp-NYl"/>
                         <outlet property="textCopyButton" destination="ODX-GG-aV3" id="fTd-Fx-BuL"/>
                     </connections>
@@ -357,6 +356,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xKY-V7-u0g" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="53N-gh-JOH">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -372,4 +372,9 @@
             <point key="canvasLocation" x="739" y="453"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

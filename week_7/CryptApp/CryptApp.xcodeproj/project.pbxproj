@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */; };
 		E307E41F1BADF2D200FF1979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E41E1BADF2D200FF1979 /* main.m */; };
 		E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4211BADF2D200FF1979 /* AppDelegate.m */; };
 		E307E42A1BADF2D200FF1979 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E307E4291BADF2D200FF1979 /* Images.xcassets */; };
 		E307E42D1BADF2D200FF1979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E307E42B1BADF2D200FF1979 /* LaunchScreen.xib */; };
 		E307E4391BADF2D200FF1979 /* CryptAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4381BADF2D200FF1979 /* CryptAppTests.m */; };
 		E307E4471BADFB5200FF1979 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4461BADFB5200FF1979 /* Encoder.m */; };
-		E322C6891BBD08AF001B58ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E322C6871BBD08AD001B58ED /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E322C68C1BBDDEEB001B58ED /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E322C68B1BBDDEEB001B58ED /* ResultViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E322C6891BBD08AF001B58ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E322C6871BBD08AD001B58ED /* Main.storyboard */; };
+		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EA8D54C1BD005BB00DB54EE /* EncodedTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodedTextViewController.h; sourceTree = "<group>"; };
+		3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodedTextViewController.m; sourceTree = "<group>"; };
 		E307E4191BADF2D100FF1979 /* CryptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E307E41D1BADF2D100FF1979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E307E41E1BADF2D200FF1979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		E307E4451BADFB5200FF1979 /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
 		E307E4461BADFB5200FF1979 /* Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encoder.m; sourceTree = "<group>"; };
 		E322C6881BBD08AE001B58ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E322C68A1BBDDEEB001B58ED /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
-		E322C68B1BBDDEEB001B58ED /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,12 +91,12 @@
 				E307E4211BADF2D200FF1979 /* AppDelegate.m */,
 				E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */,
 				E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */,
+				3EA8D54C1BD005BB00DB54EE /* EncodedTextViewController.h */,
+				3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */,
 				E307E4451BADFB5200FF1979 /* Encoder.h */,
 				E307E4461BADFB5200FF1979 /* Encoder.m */,
 				E307E4291BADF2D200FF1979 /* Images.xcassets */,
 				E322C6871BBD08AD001B58ED /* Main.storyboard */,
-				E322C68A1BBDDEEB001B58ED /* ResultViewController.h */,
-				E322C68B1BBDDEEB001B58ED /* ResultViewController.m */,
 				E307E42B1BADF2D200FF1979 /* LaunchScreen.xib */,
 				E307E41C1BADF2D100FF1979 /* Supporting Files */,
 			);
@@ -232,7 +232,7 @@
 				E307E4471BADFB5200FF1979 /* Encoder.m in Sources */,
 				E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */,
 				E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */,
-				E322C68C1BBDDEEB001B58ED /* ResultViewController.m in Sources */,
+				3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */,
 				E307E41F1BADF2D200FF1979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +360,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEPLOYMENT_LOCATION = YES;
+				"DEPLOYMENT_LOCATION[sdk=*]" = YES;
 				INFOPLIST_FILE = CryptApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEPLOYMENT_LOCATION = YES;
 				INFOPLIST_FILE = CryptApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -380,7 +385,6 @@
 		E307E4401BADF2D200FF1979 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -390,7 +394,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CryptAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptApp.app/CryptApp";
 			};
@@ -399,13 +405,14 @@
 		E307E4411BADF2D200FF1979 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CryptAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptApp.app/CryptApp";
 			};

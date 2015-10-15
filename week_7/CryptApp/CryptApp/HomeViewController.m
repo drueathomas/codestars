@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Encoder.h"
-#import "ResultViewController.h"
+#import "EncodedTextViewController.h"
 
 @interface HomeViewController ()
 
@@ -89,11 +89,11 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showResult"]) {
+    if ([segue.identifier isEqualToString:@"showEncodedText"]) {
         NSString *result = self.encodedText;
+        EncodedTextViewController *encodedViewController = segue.destinationViewController;
+       encodedViewController.text = result;
         
-        ResultViewController *destViewController = segue.destinationViewController;
-        destViewController.encodedText = result;
     }
 }
 @end
