@@ -29,11 +29,11 @@
 
 - (void) userInputToChars : (NSString *) userInput;
 - (void) charsToCipherKeys;
-- (void) cipherkeysToChars;
+- (void) cipherKeysToChars;
 - (NSString *) arrayToString;
 
 //encoding use input package
-- (NSString *) encodeUserInput : (Encoder *) encode : (NSString *) userInput;
+- (NSString *) encodeUserInput : (NSString *) userInput;
 
 
 @end

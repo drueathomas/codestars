@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Encoder.h"
+#import "ResultViewController.h"
 
 @interface HomeViewController ()
 
@@ -17,10 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-//    [self.generateCipherButton addTarget:self action:@selector(buttonPressed:)
-//     forControlEvents:UIControlEventTouchUpInside];
 
     
     [self.view addSubview:self.generateCipherButton];
@@ -70,9 +67,17 @@
     
     [c1 generateCipher];
     
-    self.encodedText = [c1 encodeUserInput:c1 : self.userInput];
+    [c1 userInputToChars: self.userInput];
     
-    UIAlertController *generatingAlert = [UIAlertController alertControllerWithTitle:@"Generating Cipher for Message:" message:(@"%@", self.encodedText) preferredStyle:UIAlertControllerStyleAlert];
+    [c1 charsToCipherKeys];
+    
+    [c1 cipherKeysToChars];
+    
+    self.encodedText = [c1 arrayToString];
+    
+    NSLog(@"ENCODED TEXT: %@", self.encodedText);
+    
+    UIAlertController *generatingAlert = [UIAlertController alertControllerWithTitle:@"Generating Cipher for Message:" message:(@"%@", self.userInput) preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *okayAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
     [generatingAlert addAction:okayAction];
@@ -81,5 +86,14 @@
     [self presentViewController:generatingAlert animated:YES completion:nil];
     
    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showResult"]) {
+        NSString *result = self.encodedText;
+        
+        ResultViewController *destViewController = segue.destinationViewController;
+        destViewController.encodedText = result;
+    }
 }
 @end

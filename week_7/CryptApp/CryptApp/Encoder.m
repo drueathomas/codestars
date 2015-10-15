@@ -109,15 +109,15 @@
     return results;
 }
 
-- (NSString *) encodeUserInput : (Encoder *) encode : (NSString *) userInput {
+- (NSString *) encodeUserInput : (NSString *) userInput {
     
-    [encode userInputToChars: userInput];
+    [self userInputToChars: userInput];
     
-    [encode charsToCipherKeys];
+    [self charsToCipherKeys];
     
-    [encode cipherKeysToChars];
+    [self cipherKeysToChars];
     
-    NSString *result = [encode arrayToString];
+    NSString *result = [self arrayToString];
     
     return result;
     
