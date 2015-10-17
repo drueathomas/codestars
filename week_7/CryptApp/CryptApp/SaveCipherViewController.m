@@ -28,7 +28,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-// pragma mark is used for easy access of code in Xcode
+
+
 #pragma mark - TextField Delegates
 
 // This method is called once we click inside the textField
@@ -48,19 +49,13 @@
     return YES;
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [self.delegate sendDataToA: self.myTitle];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EncodedTextViewController *encode = segue.destinationViewController;
+    
+    encode.myCipherName = self.myTitle;
+    
     
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

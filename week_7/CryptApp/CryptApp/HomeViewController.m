@@ -80,12 +80,9 @@
 
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
         
-        EncodedTextViewController *encodedViewController = segue.destinationViewController;
+    EncodedTextViewController *encodedViewController = segue.destinationViewController;
         
-        //NSString *result = (@"%@", self.encodedText);
-        NSLog(@"ENCODED TEXT: %@", self.encodedText);
-        
-        encodedViewController.myText = self.encodedText;
+    encodedViewController.myText = self.encodedText;
         
     }
 }

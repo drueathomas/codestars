@@ -38,11 +38,7 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EncodedTextViewController *acontollerobject=[[EncodedTextViewController alloc] initWithNibName:@"EncodedTextViewController" bundle:nil];
-    acontollerobject.delegate=self; // protocol listener
-    [self.navigationController pushViewController:acontollerobject animated:YES];
-}
+
 
 
 @end

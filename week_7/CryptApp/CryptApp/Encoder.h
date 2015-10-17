@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary* standardAlphabet;
 @property (nonatomic, strong) NSMutableDictionary* cipher;
-@property (nonatomic, strong) NSMutableArray* activeCiphers;
+@property (nonatomic, strong) NSMutableDictionary* activeCiphers;
 @property (nonatomic, strong) NSMutableArray* charsToKeys;
 @property (nonatomic, strong) NSMutableArray* userInputChars;
 @property (nonatomic, strong) NSMutableArray* exclude;
@@ -20,6 +20,7 @@
 @property (nonatomic) NSInteger topOfRange;
 @property (nonatomic, strong) NSString * encodedText;
 @property (nonatomic, strong) NSArray *alphabet;
+@property (nonatomic) NSString *cipherName;
 
 //methods
 

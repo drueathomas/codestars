@@ -101,38 +101,37 @@
             </objects>
             <point key="canvasLocation" x="1803" y="453"/>
         </scene>
-        <!--Ciphers-->
+        <!--Cipher Table View Controller-->
         <scene sceneID="GWw-tg-vct">
             <objects>
-                <tableViewController id="8VE-BM-8yv" sceneMemberID="viewController">
+                <tableViewController id="8VE-BM-8yv" customClass="CipherTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3M-JE-cc4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="md2-Zu-2qY" customClass="CipherTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="320" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="md2-Zu-2qY" customClass="CipherTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="md2-Zu-2qY" id="Bd7-Ga-yQf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-rG-4He">
+                                            <rect key="frame" x="24" y="14" width="54" height="44"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whK-9x-NIh">
-                                            <rect key="frame" x="101" y="25" width="100" height="21"/>
+                                            <rect key="frame" x="134" y="26" width="100" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-rG-4He">
-                                            <rect key="frame" x="24" y="14" width="54" height="44"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cipherLabel" destination="whK-9x-NIh" id="Ea2-jF-qVB"/>
-                                    <outlet property="cipherName" destination="whK-9x-NIh" id="HNd-mJ-b1m"/>
+                                    <outlet property="cipherNameLabel" destination="whK-9x-NIh" id="1qM-ka-QzS"/>
                                     <outlet property="cipherThumbnail" destination="Bd7-Ga-yQf" id="eKH-So-6lT"/>
-                                    <outlet property="textLabel" destination="whK-9x-NIh" id="RaI-Vu-WdR"/>
+                                    <outlet property="thumbnailImageView" destination="mpE-rG-4He" id="voe-Cx-Gin"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -141,11 +140,11 @@
                             <outlet property="delegate" destination="8VE-BM-8yv" id="3I0-cN-zPY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Ciphers" id="eJJ-Yb-t5K"/>
+                    <navigationItem key="navigationItem" id="rTe-ui-9w6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-Dz-dNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="1219"/>
+            <point key="canvasLocation" x="1820" y="1161"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fVg-0Z-e6d">
@@ -188,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-yE-AyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="1103"/>
+            <point key="canvasLocation" x="1796" y="1971"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gaH-Ja-ydT">
@@ -220,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAc-Vl-LN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="1788"/>
+            <point key="canvasLocation" x="1796" y="2656"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Luz-65-1aq">
@@ -253,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yP-dG-A2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245" y="1103"/>
+            <point key="canvasLocation" x="2313" y="1971"/>
         </scene>
         <!--Encoded Text View Controller-->
         <scene sceneID="68D-am-ogl">
@@ -328,6 +327,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-aN-GQp">
                                 <rect key="frame" x="151" y="319" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="2SN-o2-f1i" kind="push" id="JTy-4P-1iv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-62-yDz">
                                 <rect key="frame" x="151" y="190" width="34" height="21"/>
@@ -381,7 +383,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TRs-dX-IJk" kind="relationship" relationship="viewControllers" id="bCc-3H-hyz"/>
-                        <segue destination="8VE-BM-8yv" kind="relationship" relationship="viewControllers" id="JOR-cm-Ekt"/>
+                        <segue destination="2SN-o2-f1i" kind="relationship" relationship="viewControllers" id="JOR-cm-Ekt"/>
                         <segue destination="xF8-eE-TNo" kind="relationship" relationship="viewControllers" id="rr0-rJ-G9a"/>
                     </connections>
                 </tabBarController>
@@ -408,5 +410,28 @@
             </objects>
             <point key="canvasLocation" x="1271" y="453"/>
         </scene>
+        <!--Ciphers-->
+        <scene sceneID="dSI-wh-PPW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2SN-o2-f1i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ciphers" id="eJJ-Yb-t5K"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KM2-aZ-wRH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jcs-hE-MeT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8VE-BM-8yv" kind="relationship" relationship="rootViewController" id="Mug-e0-XyA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNo-ha-lyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="1161"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JTy-4P-1iv"/>
+    </inferredMetricsTieBreakers>
 </document>
