@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -55,10 +56,10 @@
                                 <rect key="frame" x="86" y="349" width="148" height="30"/>
                                 <state key="normal" title="Generate New Cipher"/>
                                 <connections>
-                                    <segue destination="t8d-Lo-bS5" kind="push" identifier="showEncodedText" id="ETK-Ml-WXv"/>
+                                    <action selector="showMessage" destination="hp0-Xm-ZSs" eventType="touchUpInside" id="CWV-mn-lMv"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
                                 <rect key="frame" x="40" y="181" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -90,6 +91,7 @@
                     <tabBarItem key="tabBarItem" systemItem="featured" id="alp-9M-5j9"/>
                     <connections>
                         <outlet property="generateCipherButton" destination="Taf-5Q-mU1" id="Yns-nL-t5J"/>
+                        <outlet property="instructions" destination="Xvu-pn-NBF" id="7Sy-I1-A7o"/>
                         <outlet property="textToEncode" destination="JsG-M2-QC8" id="QBU-oU-OP1"/>
                         <outlet property="welcomeText" destination="XWk-kP-IRW" id="Jju-8N-Bax"/>
                     </connections>
@@ -272,7 +274,7 @@
                                 <rect key="frame" x="124" y="328" width="83" height="30"/>
                                 <state key="normal" title="Save Cipher"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
                                 <rect key="frame" x="145" y="130" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -297,12 +299,7 @@
                     <connections>
                         <outlet property="cipherCopyButton" destination="ODX-GG-aV3" id="Rna-En-Dej"/>
                         <outlet property="cipherSaveButton" destination="jlP-hZ-IzR" id="IFg-eg-eDk"/>
-                        <outlet property="copy" destination="ODX-GG-aV3" id="uc5-dh-uye"/>
-                        <outlet property="copyButton" destination="ODX-GG-aV3" id="O8I-or-kQ8"/>
-                        <outlet property="copyTextButton" destination="ODX-GG-aV3" id="vXd-eE-j3U"/>
-                        <outlet property="encodedTextLabel" destination="Fsy-yn-Gep" id="KXS-4f-hvC"/>
-                        <outlet property="saveCipherButton" destination="jlP-hZ-IzR" id="OEI-Pp-NYl"/>
-                        <outlet property="textCopyButton" destination="ODX-GG-aV3" id="fTd-Fx-BuL"/>
+                        <outlet property="encodedTextLabel" destination="Fsy-yn-Gep" id="eNR-de-JHR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRb-yg-qXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,10 +339,6 @@
                             <constraint firstItem="bpD-t5-cel" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="30" id="hLO-u9-w6n"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="cipherName" destination="bpD-t5-cel" id="xKT-kN-iCZ"/>
-                        <outlet property="cipherSaveButton" destination="tAd-aN-GQp" id="Wi2-uf-nRO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVo-WC-1hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,9 +365,4 @@
             <point key="canvasLocation" x="739" y="453"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

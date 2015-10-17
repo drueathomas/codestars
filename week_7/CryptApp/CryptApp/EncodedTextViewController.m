@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.encodedTextLabel.text = self.text.text;
+    self.encodedTextLabel.text = self.text;
 }
 
 - (void)didReceiveMemoryWarning {
