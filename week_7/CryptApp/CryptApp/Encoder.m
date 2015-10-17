@@ -14,7 +14,7 @@
 - (void) generateStandardAlphabet {
     self.standardAlphabet = [NSMutableDictionary dictionary];
     
-    self.alphabet = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",@"i",@"j",@"k",@"l",@"m",@"n",@"o",@"p",@"q",@"r",@"s",@"t",@"u",@"v",@"w",@"x",@"y",@"z",nil];
+    self.alphabet = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",@"i",@"j",@"k",@"l",@"m",@"n",@"o",@"p",@"q",@"r",@"s",@"t",@"u",@"v",@"w",@"x",@"y",@"z",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",nil];
     
     NSInteger index = 0;
     
@@ -29,7 +29,7 @@
 }
 
 -(void) generateRandomNumberSet {
-    self.topOfRange = 26;
+    self.topOfRange = 52;
     
     self.exclude = [NSMutableArray array];
     
@@ -83,15 +83,62 @@
 }
 
 - (void) charsToCipherKeys {
+    //initialize charsToKeys
+    self.charsToKeys = [NSMutableArray array];
+    
+    //character set with acceptable letters
+    NSCharacterSet *strCharSet = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+        strCharSet = [strCharSet invertedSet];
+    
     
     for (int i=0; i<[self.userInputChars count]; i++) {
-        
+       
+        //put char in string; compare string to range
         NSString *character = [self.userInputChars objectAtIndex:i];
         
-        [self.charsToKeys addObjectsFromArray:[self.cipher valueForKey:[NSString stringWithFormat:@"%@", character]]];
         
+        //check to see if uppercase
+//        BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[character characterAtIndex:0]];
+        
+//       // NSRange s = NSMakeRange(0, character.length);
+//        NSRange r = [character rangeOfCharacterFromSet:strCharSet
+//                                               //options:0                                           range:s
+//                     ];
+//        
+//        NSUInteger rangeLength = r.length;
+//        NSLog(@"%lu", (unsigned long)rangeLength);
+//        
+//        //if it is not a letter, add to array as is
+//        if ((r.location =! NSNotFound)) {
+        
+        NSRange first = [character rangeOfComposedCharacterSequenceAtIndex:0];
+        NSRange match = [character rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet] options:0 range:first];
+        
+        if (match.location != NSNotFound) {
+            // codeString starts with a letter
+            
+//            if (isUppercase) {
+//                NSString *lower = [character lowercaseString];
+                //add to array
+                [self.charsToKeys addObjectsFromArray:[self.cipher valueForKey:[NSString stringWithFormat:@"%@", character]]];
+                //uppercase the letter you added
+                
+                
+//            }else {
+//                
+//                [self.charsToKeys addObjectsFromArray:[self.cipher valueForKey:[NSString stringWithFormat:@"%@", character]]];
+//            }
+            
+        
+        } else {
+            
+             [self.charsToKeys addObject:character];
+            
+        }
+        
+    
     }
-    NSLog(@"%@", self.userInputChars);
+    NSLog(@"%@", self.charsToKeys);
 }
 - (void) cipherKeysToChars {
     
