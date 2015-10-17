@@ -8,7 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Encoder : NSObject
+@protocol EncoderProtocol
+
+-(void)setup;
+
+@end
+
+@interface Encoder : NSObject <EncoderProtocol>
+
++ (id<EncoderProtocol>)sharedInstance;
 
 @property (nonatomic, strong) NSMutableDictionary* standardAlphabet;
 @property (nonatomic, strong) NSMutableDictionary* cipher;
@@ -27,7 +35,6 @@
 - (void) generateStandardAlphabet;
 - (void) generateRandomNumberSet;
 - (void) generateCipher;
-
 - (void) userInputToChars : (NSString *) userInput;
 - (void) charsToCipherKeys;
 - (void) cipherKeysToChars;
@@ -36,14 +43,14 @@
 - (NSString *) arrayToString;
 
 //encoding use input package
-- (NSString *) encodeUserInput : (NSString *) userInput;
+- (NSString *) encodeUserInput : (NSString *) userInput : (NSString *) name;
 
 //decode user input
--(NSString *) decodeUserInput : (NSString *) userInput;
+-(NSString *) decodeUserInput : (NSString *) userInput : (NSString *) name;
 
 //save the cipher
 
--(void) saveCipher;
+-(void) saveCipher :(NSString *) name ;
 
 
 

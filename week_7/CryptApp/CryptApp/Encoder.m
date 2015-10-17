@@ -25,7 +25,7 @@
         index ++;
     }
     
-    NSLog(@"STANDARD: %@", self.standardAlphabet);
+    
 }
 
 -(void) generateRandomNumberSet {
@@ -42,8 +42,7 @@
             [self.exclude addObject:(aRandom)];
             counter++;
     
-    NSLog(@" EXCLUDE: %@", self.exclude);
-    
+        
 }
     }
 }
@@ -52,14 +51,6 @@
     
     self.cipher = [NSMutableDictionary dictionary];
     
-    NSLog(@"EXCLUDE: %@", self.exclude);
-
-    NSLog(@"alphabet : %@", self.alphabet);
-    
-    
-    NSLog(@"A0: %@",[self.alphabet objectAtIndex:0]);
-    NSLog(@"E0: %@",[self.exclude objectAtIndex:0]);
-
     
     for (NSInteger counter = 0; counter < [self.alphabet count]; counter ++)
     {
@@ -234,7 +225,7 @@
     return result;
 }
 
-- (NSString *) encodeUserInput : (NSString *) userInput {
+- (NSString *) encodeUserInput : (NSString *) userInput :  (NSString *) name{
     
     [self userInputToChars: userInput];
     
@@ -244,6 +235,8 @@
     
     NSString *result = [self arrayToString];
     
+    [self saveCipher:name];
+    
     
     NSLog(@"%@", result);
     
@@ -251,7 +244,7 @@
     
     }
 
--(NSString *) decodeUserInput : (NSString *) userInput {
+-(NSString *) decodeUserInput : (NSString *) userInput : (NSString *) name{
     
     [self userInputToChars: userInput];
     
@@ -261,6 +254,7 @@
     
     NSString *result = [self arrayToString];
     
+    [self saveCipher:name];
     
     NSLog(@"%@", result);
 
@@ -269,18 +263,35 @@
     
 }
 
--(void) saveCipher {
+-(void) saveCipher :(NSString *) name {
     //how do I initialize this the first time and never again?
-    if ([self.activeCiphers count]==0)
+    if (!self.activeCiphers)
         self.activeCiphers = [NSMutableDictionary dictionary];
+ 
   
+    self.cipherName = name;
+    
     NSMutableDictionary *cipherToSave = self.cipher;
     
     [cipherToSave setObject:self.cipherName forKey:@"name"];
     
     [self.activeCiphers  setObject:cipherToSave forKey:self.cipherName];
     
+    
+    NSLog(@"ACTIVE CIPHERS%@", self.activeCiphers);
+    
 
+}
+
++ (id<EncoderProtocol>)sharedInstance {
+    // Retrieve class name from a config file or inject it...
+    static NSString *className = @"Encoder";
+    static dispatch_once_t once;
+    static id<EncoderProtocol> instance;
+    dispatch_once(&once, ^{
+        instance = [[NSClassFromString(className) alloc] init];
+    });
+    return instance;
 }
 
 @end

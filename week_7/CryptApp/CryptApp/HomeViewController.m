@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "Encoder.h"
 #import "EncodedTextViewController.h"
-#import "SaveCipherViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -19,10 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.userInput = self.textToEncode.text;
+    
     [self.view addSubview:self.generateCipherButton];
-   }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -57,10 +58,15 @@
     
 }
 
+-(IBAction)showMessage{
+    
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    
+    self.cipherName = self.cipherNameInput.text;
+    NSLog(@"%@", self.cipherName);
+
     
     Encoder *c1 = [[Encoder alloc] init];
     
@@ -70,19 +76,13 @@
     
     [c1 generateCipher];
     
-    [c1 userInputToChars: self.userInput];
+    self.encodedText = [c1 encodeUserInput:self.userInput: self.cipherName];
     
-    [c1 charsToCipherKeys];
-    
-    [c1 cipherKeysToChars];
-    
-    self.encodedText = [c1 arrayToString];
-
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
         
-    EncodedTextViewController *encodedViewController = segue.destinationViewController;
+        EncodedTextViewController *encodedViewController = segue.destinationViewController;
         
-    encodedViewController.myText = self.encodedText;
+               encodedViewController.myText = self.encodedText;
         
     }
 }

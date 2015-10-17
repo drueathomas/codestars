@@ -47,13 +47,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Crypt!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-kP-IRW">
-                                <rect key="frame" x="84" y="69" width="143" height="21"/>
+                                <rect key="frame" x="84" y="108" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-5Q-mU1">
-                                <rect key="frame" x="86" y="349" width="148" height="30"/>
+                                <rect key="frame" x="86" y="430" width="148" height="30"/>
                                 <state key="normal" title="Generate New Cipher"/>
                                 <connections>
                                     <action selector="showMessage" destination="hp0-Xm-ZSs" eventType="touchUpInside" id="CWV-mn-lMv"/>
@@ -61,16 +61,21 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
-                                <rect key="frame" x="40" y="181" width="240" height="128"/>
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-pn-NBF">
-                                <rect key="frame" x="53" y="125" width="214" height="21"/>
+                                <rect key="frame" x="53" y="164" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Save As..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBB-Gj-XcE">
+                                <rect key="frame" x="53" y="383" width="227" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,6 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0qQ-C9-EfR"/>
                     <connections>
+                        <outlet property="cipherNameInput" destination="aBB-Gj-XcE" id="rkn-bl-t7B"/>
                         <outlet property="generateCipherButton" destination="Taf-5Q-mU1" id="Yns-nL-t5J"/>
                         <outlet property="instructions" destination="Xvu-pn-NBF" id="7Sy-I1-A7o"/>
                         <outlet property="textToEncode" destination="JsG-M2-QC8" id="QBU-oU-OP1"/>
@@ -110,11 +116,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="md2-Zu-2qY" customClass="CipherTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="md2-Zu-2qY" customClass="CipherTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="md2-Zu-2qY" id="Bd7-Ga-yQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-rG-4He">
@@ -123,7 +129,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whK-9x-NIh">
                                             <rect key="frame" x="134" y="26" width="100" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -132,6 +138,7 @@
                                     <outlet property="cipherNameLabel" destination="whK-9x-NIh" id="1qM-ka-QzS"/>
                                     <outlet property="cipherThumbnail" destination="Bd7-Ga-yQf" id="eKH-So-6lT"/>
                                     <outlet property="thumbnailImageView" destination="mpE-rG-4He" id="voe-Cx-Gin"/>
+                                    <segue destination="qLs-6K-wD0" kind="push" identifier="showDetailView" id="b3b-7Q-c5u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -146,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1820" y="1161"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Cipher Table View Controller-->
         <scene sceneID="fVg-0Z-e6d">
             <objects>
-                <viewController id="qLs-6K-wD0" sceneMemberID="viewController">
+                <viewController id="qLs-6K-wD0" customClass="DetailCipherTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kCJ-wa-jGr"/>
                         <viewControllerLayoutGuide type="bottom" id="tV3-6k-WbG"/>
@@ -163,16 +170,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-pd-6VL">
-                                <rect key="frame" x="116" y="61" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQC-6t-2he">
-                                <rect key="frame" x="119" y="405" width="83" height="30"/>
-                                <state key="normal" title="View Cipher"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edU-3N-TfR">
                                 <rect key="frame" x="90" y="322" width="52" height="30"/>
                                 <state key="normal" title="Encode"/>
@@ -181,13 +178,26 @@
                                 <rect key="frame" x="176" y="322" width="54" height="30"/>
                                 <state key="normal" title="Decode"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-pd-6VL">
+                                <rect key="frame" x="116" y="72" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3fU-yO-mcx"/>
+                    <connections>
+                        <outlet property="alterTextView" destination="hao-E3-HLn" id="lhU-7f-ACP"/>
+                        <outlet property="cipherNameLabel" destination="RjC-pd-6VL" id="pE5-y3-VKV"/>
+                        <outlet property="decodeButton" destination="fTh-Tx-Y9e" id="Obm-lN-Kuw"/>
+                        <outlet property="encodeButton" destination="edU-3N-TfR" id="8bv-82-dwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-yE-AyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="1971"/>
+            <point key="canvasLocation" x="2308" y="1167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gaH-Ja-ydT">
@@ -204,13 +214,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgU-zK-kA1">
                                 <rect key="frame" x="110" y="80" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7c-yd-byH">
                                 <rect key="frame" x="120" y="143" width="80" height="294"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -236,7 +246,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Encoded Text Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-Qp-kZ4">
                                 <rect key="frame" x="25" y="78" width="270" height="166"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJN-A6-Uea">
@@ -273,103 +283,32 @@
                                     <action selector="copyText" destination="t8d-Lo-bS5" eventType="touchUpInside" id="WFE-KR-YtO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlP-hZ-IzR">
-                                <rect key="frame" x="127" y="386" width="83" height="30"/>
-                                <state key="normal" title="Save Cipher"/>
-                                <connections>
-                                    <segue destination="UrX-lq-L3V" kind="push" identifier="saveCipher" id="XDi-WK-h8m"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Encoded Text..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
                                 <rect key="frame" x="29" y="108" width="262" height="177"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jlP-hZ-IzR" firstAttribute="top" secondItem="ODX-GG-aV3" secondAttribute="bottom" constant="29" id="6Xo-uK-Vm7"/>
                             <constraint firstItem="ODX-GG-aV3" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="122" id="Adh-Te-qOY"/>
                             <constraint firstItem="ODX-GG-aV3" firstAttribute="top" secondItem="Fsy-yn-Gep" secondAttribute="bottom" constant="118" id="Mg1-4Y-RRk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jlP-hZ-IzR" secondAttribute="trailing" constant="93" id="U5W-62-FGs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fsy-yn-Gep" secondAttribute="trailing" constant="117" id="bAN-Q3-mQD"/>
-                            <constraint firstItem="WK3-eS-CWj" firstAttribute="top" secondItem="jlP-hZ-IzR" secondAttribute="bottom" constant="210" id="bLf-Oj-cGo"/>
                             <constraint firstItem="Fsy-yn-Gep" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="129" id="bS2-7H-gsG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ODX-GG-aV3" secondAttribute="trailing" constant="122" id="kRj-sh-IXw"/>
                             <constraint firstItem="Fsy-yn-Gep" firstAttribute="top" secondItem="1dL-Nc-Akd" secondAttribute="bottom" constant="110" id="lDX-F2-1gI"/>
-                            <constraint firstItem="jlP-hZ-IzR" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="104" id="mek-Du-3At"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Sj-tT-QY4"/>
                     <connections>
                         <outlet property="cipherCopyButton" destination="ODX-GG-aV3" id="Rna-En-Dej"/>
-                        <outlet property="cipherSaveButton" destination="jlP-hZ-IzR" id="IFg-eg-eDk"/>
                         <outlet property="encodedTextLabel" destination="Fsy-yn-Gep" id="MYE-ZX-Khj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRb-yg-qXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2260" y="453"/>
-        </scene>
-        <!--Save Cipher View Controller-->
-        <scene sceneID="OGV-QT-fNu">
-            <objects>
-                <viewController id="UrX-lq-L3V" customClass="SaveCipherViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8qo-zK-AGB"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vs1-lS-Tne"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8KI-hv-tzb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-aN-GQp">
-                                <rect key="frame" x="151" y="319" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="2SN-o2-f1i" kind="push" id="JTy-4P-1iv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-62-yDz">
-                                <rect key="frame" x="151" y="190" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAM-lj-zOl">
-                                <rect key="frame" x="39" y="236" width="243" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fyh-62-yDz" firstAttribute="top" secondItem="8qo-zK-AGB" secondAttribute="bottom" constant="126" id="16d-MN-Ztn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PAM-lj-zOl" secondAttribute="trailing" constant="10" id="2c8-zh-p2e"/>
-                            <constraint firstItem="Vs1-lS-Tne" firstAttribute="top" secondItem="tAd-aN-GQp" secondAttribute="bottom" constant="219" id="6Oa-fT-WMt"/>
-                            <constraint firstItem="tAd-aN-GQp" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="131" id="8UY-0k-7gI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tAd-aN-GQp" secondAttribute="trailing" constant="115" id="8wu-qd-OM3"/>
-                            <constraint firstItem="PAM-lj-zOl" firstAttribute="top" secondItem="fyh-62-yDz" secondAttribute="bottom" constant="22" id="FG5-eY-ZDl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fyh-62-yDz" secondAttribute="trailing" constant="115" id="NQQ-SG-sqf"/>
-                            <constraint firstItem="fyh-62-yDz" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="131" id="S3Y-Ij-8mW"/>
-                            <constraint firstItem="tAd-aN-GQp" firstAttribute="top" secondItem="PAM-lj-zOl" secondAttribute="bottom" constant="56" id="VHz-4w-WF9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tAd-aN-GQp" secondAttribute="trailing" constant="115" id="c0a-Cr-hsR"/>
-                            <constraint firstItem="PAM-lj-zOl" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="27" id="dPU-w8-2jT"/>
-                            <constraint firstItem="Vs1-lS-Tne" firstAttribute="top" secondItem="tAd-aN-GQp" secondAttribute="bottom" constant="170" id="er5-AR-OtL"/>
-                            <constraint firstItem="tAd-aN-GQp" firstAttribute="leading" secondItem="8KI-hv-tzb" secondAttribute="leadingMargin" constant="131" id="qmD-y0-4du"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="rVf-D3-w7D"/>
-                    <connections>
-                        <outlet property="cipherTitle" destination="PAM-lj-zOl" id="Lzf-nu-zzj"/>
-                        <outlet property="saveCipherTitle" destination="tAd-aN-GQp" id="c5g-wA-c4a"/>
-                        <outlet property="titleLabel" destination="fyh-62-yDz" id="IBi-yH-Ane"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MVo-WC-1hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2777" y="453"/>
+            <point key="canvasLocation" x="2330" y="453"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9bX-vr-4PK">
@@ -431,7 +370,4 @@
             <point key="canvasLocation" x="1288" y="1161"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="JTy-4P-1iv"/>
-    </inferredMetricsTieBreakers>
 </document>

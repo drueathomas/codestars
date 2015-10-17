@@ -1,33 +1,24 @@
 //
-//  CipherTableViewController.m
+//  DetailCipherTableViewController.m
 //  CryptApp
 //
 //  Created by Drue Thomas on 10/17/15.
 //  Copyright © 2015 Drue Thomas. All rights reserved.
 //
 
-#import "CipherTableViewController.h"
-#import "CipherTableViewCell.h"
-#import "Encoder.h"
 #import "DetailCipherTableViewController.h"
 
-@interface CipherTableViewController ()
+@interface DetailCipherTableViewController ()
 
 @end
 
-@implementation CipherTableViewController
-{
-    NSMutableArray *cipherNames;
-    NSMutableArray *cipherImages;
-}
-
+@implementation DetailCipherTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    cipherNames = [[NSMutableArray alloc] initWithObjects:@"Drue", @"Yurm", @"Mom", nil];
-    
-    cipherImages = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],nil];
+    self.cipherNameLabel.text = self.cipherName;
+    self.userInput = self.alterTextView.text;
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -35,9 +26,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,24 +37,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return [cipherNames count];
+    return 0;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
-(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"Cell";
-    CipherTableViewCell *cell = (CipherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.cipherNameLabel.text = [cipherNames objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:[cipherImages objectAtIndex:indexPath.row]];
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
 }
+*/
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,17 +89,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
-- (void) prepareForSegue: (UIStoryboardSegue *)segue sender:(id)sender{
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
-if([segue.identifier isEqualToString: @"showDetailView"]){
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    DetailCipherTableViewController *dest = segue.destinationViewController;
-    dest.cipherName = [cipherNames objectAtIndex:indexPath.row];
-    
-}
-}
 @end
