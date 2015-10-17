@@ -141,15 +141,16 @@
             
         }
         
-        
     }
     NSLog(@"%@", self.keysToChars);
 }
 
 - (NSString *) arrayToString {
-    NSString* results = [[self.charsToKeys valueForKey: @"description"] componentsSeparatedByString:@" "];
-    NSLog(@"%@", results);
-    return results;
+    
+    NSString * result = [[self.keysToChars valueForKey:@"description"] componentsJoinedByString:@""];
+    NSLog(@"%@", result);
+    
+    return result;
 }
 
 - (NSString *) encodeUserInput : (NSString *) userInput {
@@ -162,11 +163,9 @@
     
     NSString *result = [self arrayToString];
     
-    return result;
-    
     NSLog(@"%@", result);
     
-
+    return result;
     
     }
 

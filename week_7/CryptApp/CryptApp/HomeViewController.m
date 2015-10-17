@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "Encoder.h"
 #import "EncodedTextViewController.h"
+#import "SaveCipherViewController.h"
 
 @interface HomeViewController ()
 
@@ -19,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    
+    self.userInput = self.textToEncode.text;
     [self.view addSubview:self.generateCipherButton];
    }
 
@@ -55,9 +56,11 @@
     
     
 }
-- (IBAction)showMessage
-{
-    self.userInput = self.textToEncode.text;
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
     
     Encoder *c1 = [[Encoder alloc] init];
     
@@ -74,25 +77,15 @@
     [c1 cipherKeysToChars];
     
     self.encodedText = [c1 arrayToString];
-    
-    NSLog(@"ENCODED TEXT: %@", self.encodedText);
-    
-    UIAlertController *generatingAlert = [UIAlertController alertControllerWithTitle:@"Generating Cipher for Message:" message:(@"%@", self.userInput) preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okayAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    [generatingAlert addAction:okayAction];
-    
-    // Display the Hello World Message
-    [self presentViewController:generatingAlert animated:YES completion:nil];
-    
-   
-}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
-        NSString *result = self.encodedText;
+        
         EncodedTextViewController *encodedViewController = segue.destinationViewController;
-       encodedViewController.text = result;
+        
+        //NSString *result = (@"%@", self.encodedText);
+        NSLog(@"ENCODED TEXT: %@", self.encodedText);
+        
+        encodedViewController.myText = self.encodedText;
         
     }
 }

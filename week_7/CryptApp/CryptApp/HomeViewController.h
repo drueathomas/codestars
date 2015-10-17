@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSString * userInput;
 @property (strong, nonatomic) NSString * encodedText;
 
-- (IBAction) showMessage;
 
 
 @end

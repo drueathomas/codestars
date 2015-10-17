@@ -12,10 +12,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *encodedTextLabel;
 
-@property (nonatomic) NSString *text;
+@property (nonatomic) NSString *myText;
 
 @property (weak, nonatomic) IBOutlet UIButton *cipherCopyButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *cipherSaveButton;
+
+-(IBAction)copyText;
 
 @end
