@@ -118,13 +118,32 @@
     NSLog(@"%@", self.charsToKeys);
 }
 - (void) cipherKeysToChars {
-//    
-//    for (int i=0; i<[self.charsToKeys count]; i++) {
-//        NSString *key = [self.charsToKeys objectAtIndex: i];
-//        [self.charsToKeys addObjectsFromArray:[self.cipher allKeysForObject:[NSString stringWithFormat:@"%@", key]]];
-//    
-//    }
-    NSLog(@"%@", self.charsToKeys);
+
+    //initialize keysToChars
+    self.keysToChars = [NSMutableArray array];
+    
+    for (int i=0; i<[self.userInputChars count]; i++) {
+        
+        //put key in id
+        id key = [self.charsToKeys objectAtIndex:i];
+        
+        //check if it is an NSNumber
+        
+        if ([key isKindOfClass:[NSNumber class]]) {
+            NSString *character = [self.standardAlphabet objectForKey:(id)key];
+            
+            [self.keysToChars addObject:character];
+            
+            
+        } else {
+            
+            [self.keysToChars addObject:key];
+            
+        }
+        
+        
+    }
+    NSLog(@"%@", self.keysToChars);
 }
 
 - (NSString *) arrayToString {
