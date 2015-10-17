@@ -57,6 +57,7 @@
                                 <state key="normal" title="Generate New Cipher"/>
                                 <connections>
                                     <action selector="showMessage" destination="hp0-Xm-ZSs" eventType="touchUpInside" id="CWV-mn-lMv"/>
+                                    <segue destination="t8d-Lo-bS5" kind="push" identifier="showEncodedText" id="OIF-pz-8r2"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
@@ -88,7 +89,7 @@
                             <constraint firstItem="JsG-M2-QC8" firstAttribute="top" secondItem="Xvu-pn-NBF" secondAttribute="bottom" constant="21" id="vaE-oB-84I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="alp-9M-5j9"/>
+                    <navigationItem key="navigationItem" id="0qQ-C9-EfR"/>
                     <connections>
                         <outlet property="generateCipherButton" destination="Taf-5Q-mU1" id="Yns-nL-t5J"/>
                         <outlet property="instructions" destination="Xvu-pn-NBF" id="7Sy-I1-A7o"/>
@@ -98,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVY-eT-cAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="453"/>
+            <point key="canvasLocation" x="1803" y="453"/>
         </scene>
         <!--Ciphers-->
         <scene sceneID="GWw-tg-vct">
@@ -266,15 +267,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
                                 <rect key="frame" x="142" y="269" width="45" height="30"/>
                                 <state key="normal" title="Copy"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlP-hZ-IzR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlP-hZ-IzR">
                                 <rect key="frame" x="124" y="328" width="83" height="30"/>
                                 <state key="normal" title="Save Cipher"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
                                 <rect key="frame" x="145" y="130" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -304,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRb-yg-qXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="453"/>
+            <point key="canvasLocation" x="2260" y="453"/>
         </scene>
         <!--Save Cipher View Controller-->
         <scene sceneID="OGV-QT-fNu">
@@ -342,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVo-WC-1hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245" y="453"/>
+            <point key="canvasLocation" x="2777" y="453"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9bX-vr-4PK">
@@ -355,7 +356,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hp0-Xm-ZSs" kind="relationship" relationship="viewControllers" id="bCc-3H-hyz"/>
+                        <segue destination="TRs-dX-IJk" kind="relationship" relationship="viewControllers" id="bCc-3H-hyz"/>
                         <segue destination="8VE-BM-8yv" kind="relationship" relationship="viewControllers" id="JOR-cm-Ekt"/>
                         <segue destination="xF8-eE-TNo" kind="relationship" relationship="viewControllers" id="rr0-rJ-G9a"/>
                     </connections>
@@ -363,6 +364,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c2-HX-NoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="739" y="453"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pwP-Rz-Tcx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TRs-dX-IJk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="alp-9M-5j9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="clj-A8-47f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hp0-Xm-ZSs" kind="relationship" relationship="rootViewController" id="0Ty-qD-e0M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFd-Qt-eKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="453"/>
         </scene>
     </scenes>
 </document>
