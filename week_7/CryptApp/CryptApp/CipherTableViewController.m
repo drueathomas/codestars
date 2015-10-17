@@ -27,7 +27,8 @@
     
     cipherNames = [[NSMutableArray alloc] initWithObjects:@"Drue", @"Yurm", @"Mom", nil];
     
-    cipherImages = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],nil];
+    
+    cipherImages = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],nil];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -62,8 +63,12 @@
 (NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
+    
+    
     CipherTableViewCell *cell = (CipherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     cell.cipherNameLabel.text = [cipherNames objectAtIndex:indexPath.row];
+    
     cell.thumbnailImageView.image = [UIImage imageNamed:[cipherImages objectAtIndex:indexPath.row]];
     return cell;
 }
@@ -109,7 +114,9 @@
 if([segue.identifier isEqualToString: @"showDetailView"]){
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
     DetailCipherTableViewController *dest = segue.destinationViewController;
+    
     dest.cipherName = [cipherNames objectAtIndex:indexPath.row];
     
 }

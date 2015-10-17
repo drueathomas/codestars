@@ -123,21 +123,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-rG-4He">
-                                            <rect key="frame" x="24" y="14" width="54" height="44"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whK-9x-NIh">
                                             <rect key="frame" x="134" y="26" width="100" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-P2-HwJ">
+                                            <rect key="frame" x="15" y="8" width="111" height="59"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cipherNameLabel" destination="whK-9x-NIh" id="1qM-ka-QzS"/>
-                                    <outlet property="cipherThumbnail" destination="Bd7-Ga-yQf" id="eKH-So-6lT"/>
-                                    <outlet property="thumbnailImageView" destination="mpE-rG-4He" id="voe-Cx-Gin"/>
+                                    <outlet property="thumbnailImageView" destination="IkQ-P2-HwJ" id="3xw-Vv-Fv0"/>
                                     <segue destination="qLs-6K-wD0" kind="push" identifier="showDetailView" id="b3b-7Q-c5u"/>
                                 </connections>
                             </tableViewCell>
