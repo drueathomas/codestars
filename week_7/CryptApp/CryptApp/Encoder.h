@@ -31,10 +31,20 @@
 - (void) userInputToChars : (NSString *) userInput;
 - (void) charsToCipherKeys;
 - (void) cipherKeysToChars;
+- (void) cipherCharsToStandardKeys;
+- (void) standardKeysToChars;
 - (NSString *) arrayToString;
 
 //encoding use input package
 - (NSString *) encodeUserInput : (NSString *) userInput;
+
+//decode user input
+-(NSString *) decodeUserInput : (NSString *) userInput;
+
+//save the cipher
+
+-(void) saveCipher;
+
 
 
 @end

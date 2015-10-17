@@ -27,33 +27,33 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
-    
-    Encoder *c1 = [[Encoder alloc] init];
-    
-    [c1 generateStandardAlphabet];
-    
-    [c1 generateRandomNumberSet];
-    
-    [c1 generateCipher];
-    
-    [c1 userInputToChars: self.userInput];
-    
-    [c1 charsToCipherKeys];
-    
-    [c1 cipherKeysToChars];
-    
-    self.encodedText = [c1 arrayToString];
-    
-    if ([segue.identifier isEqualToString:@"showEncodedText"]) {
-        
-        EncodedTextViewController *encodedViewController = segue.destinationViewController;
-        
-        encodedViewController.myText = self.encodedText;
-        
-    }
-}
-
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    
+//    
+//    Encoder *c1 = [[Encoder alloc] init];
+//    
+//    [c1 generateStandardAlphabet];
+//    
+//    [c1 generateRandomNumberSet];
+//    
+//    [c1 generateCipher];
+//    
+//    [c1 userInputToChars: self.userInput];
+//    
+//    [c1 charsToCipherKeys];
+//    
+//    [c1 cipherKeysToChars];
+//    
+//    self.encodedText = [c1 arrayToString];
+//    
+//    if ([segue.identifier isEqualToString:@"showEncodedText"]) {
+//        
+//        EncodedTextViewController *encodedViewController = segue.destinationViewController;
+//        
+//        encodedViewController.myText = self.encodedText;
+//        
+//    }
+//}
+//
 @end

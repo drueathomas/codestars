@@ -72,8 +72,12 @@
 }
 
 - (void) userInputToChars : (NSString *) userInput {
+    if (!self.userInputChars)
+        self.userInputChars = [[NSMutableArray alloc] initWithCapacity:[userInput length]];
+    else
+        [self.userInputChars removeAllObjects];
     
-    self.userInputChars = [[NSMutableArray alloc] initWithCapacity:[userInput length]];
+    
     for (int i=0; i < [userInput length]; i++) {
         NSString *ichar  = [NSString stringWithFormat:@"%c", [userInput characterAtIndex:i]];
         [self.userInputChars addObject:ichar];
@@ -83,8 +87,11 @@
 }
 
 - (void) charsToCipherKeys {
-    //initialize charsToKeys
-    self.charsToKeys = [NSMutableArray array];
+    //initialize charsToKeys; remove all other values
+    if (!self.charsToKeys)
+        self.charsToKeys = [NSMutableArray array];
+    else
+        [self.charsToKeys removeAllObjects];
     
     //character set with acceptable letters
     NSCharacterSet *strCharSet = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"];
@@ -119,8 +126,11 @@
 }
 - (void) cipherKeysToChars {
 
-    //initialize keysToChars
-    self.keysToChars = [NSMutableArray array];
+    //initialize keysToChars; clear if necessary
+    if (!self.keysToChars)
+        self.keysToChars = [NSMutableArray array];
+    else
+        [self.keysToChars removeAllObjects];
     
     for (int i=0; i<[self.userInputChars count]; i++) {
         
@@ -145,6 +155,77 @@
     NSLog(@"%@", self.keysToChars);
 }
 
+- (void) cipherCharsToStandardKeys {
+    //initialize charsToKeys; empty if necessary
+    if (!self.charsToKeys)
+        self.charsToKeys = [NSMutableArray array];
+    else
+        [self.charsToKeys removeAllObjects];
+    
+    //character set with acceptable letters
+    NSCharacterSet *strCharSet = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+    strCharSet = [strCharSet invertedSet];
+    
+    
+    for (int i=0; i<[self.userInputChars count]; i++) {
+        
+        //put char in string; compare string to range
+        NSString *character = [self.userInputChars objectAtIndex:i];
+        
+        
+        NSRange first = [character rangeOfComposedCharacterSequenceAtIndex:0];
+        NSRange match = [character rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet] options:0 range:first];
+        
+        if (match.location != NSNotFound) {
+            
+            NSArray *key = [self.standardAlphabet allKeysForObject: (NSString*) character];
+            
+            [self.charsToKeys addObjectsFromArray:key];
+            
+            
+        } else {
+            
+            [self.charsToKeys addObject:character];
+            
+        }
+        
+        
+    }
+    NSLog(@"%@", self.charsToKeys);
+}
+- (void)standardKeysToChars {
+    
+    //initialize keysToChars; clear if necessary
+    if (!self.keysToChars)
+        self.keysToChars = [NSMutableArray array];
+    else
+        [self.keysToChars removeAllObjects];
+    
+    for (int i=0; i<[self.userInputChars count]; i++) {
+        
+        //put key in id
+        id key = [self.charsToKeys objectAtIndex:i];
+        
+        //check if it is an NSNumber
+        
+        if ([key isKindOfClass:[NSNumber class]]) {
+            NSString *character = [self.standardAlphabet objectForKey:(id)key];
+            
+            [self.keysToChars addObject:character];
+            
+            
+        } else {
+            
+            [self.keysToChars addObject:key];
+            
+        }
+        
+    }
+    NSLog(@"%@", self.keysToChars);
+}
+
+
+
 - (NSString *) arrayToString {
     
     NSString * result = [[self.keysToChars valueForKey:@"description"] componentsJoinedByString:@""];
@@ -163,11 +244,44 @@
     
     NSString *result = [self arrayToString];
     
+    
     NSLog(@"%@", result);
     
     return result;
     
     }
+
+-(NSString *) decodeUserInput : (NSString *) userInput {
+    
+    [self userInputToChars: userInput];
+    
+    [self cipherCharsToStandardKeys];
+    
+    [self standardKeysToChars];
+    
+    NSString *result = [self arrayToString];
+    
+    
+    NSLog(@"%@", result);
+
+    
+    return result;
+    
+}
+
+-(void) saveCipher {
+    //how do I initialize this the first time and never again?
+    if ([self.activeCiphers count]==0)
+        self.activeCiphers = [NSMutableDictionary dictionary];
+  
+    NSMutableDictionary *cipherToSave = self.cipher;
+    
+    [cipherToSave setObject:self.cipherName forKey:@"name"];
+    
+    [self.activeCiphers  setObject:cipherToSave forKey:self.cipherName];
+    
+
+}
 
 @end
 
