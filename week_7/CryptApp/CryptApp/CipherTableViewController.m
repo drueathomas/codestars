@@ -51,7 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addCipher:(Cipher*)cipher
+- (void)addCipher:(NSMutableDictionary*)cipher
 {
     
     [[SharedCipher sharedInstance] addCipher:cipher];

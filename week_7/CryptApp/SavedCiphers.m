@@ -94,7 +94,7 @@
 }
 
 
-- (void)addCipher:(Cipher*)cipher
+- (void)addCipher:(NSMutableDictionary *)cipher
 {
 
     [ciphers addObject:cipher];

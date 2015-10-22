@@ -50,7 +50,7 @@
     return [savedCiphers getCiphers];
 }
 
-- (void)addCipher:(Cipher*)cipher
+- (void)addCipher:(NSMutableDictionary *)cipher
 {
     
     [savedCiphers addCipher:cipher];

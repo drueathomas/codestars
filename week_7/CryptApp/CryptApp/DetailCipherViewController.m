@@ -81,12 +81,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSMutableArray *allCiphers = [[SharedCipher sharedInstance] getCiphers];
+    NSMutableDictionary *storedCipher = [NSMutableDictionary dictionary];
+    
     NSString *key = @"name";
     
-    NSString *str = self.cipherName;
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(%K == %@)", key, str];
-    NSMutableDictionary *storedCipher = [[allCiphers filteredArrayUsingPredicate:pred]objectAtIndex:0];
-    BOOL success = storedCipher.count > 0;
+    NSString *name = self.cipherName;
+    
+    for (NSMutableDictionary *dict in allCiphers){
+        if([dict valueForKey:key]== name)
+           storedCipher = dict;
+    }
+    
     
     Encoder *c1 = [[Encoder alloc] init];
 

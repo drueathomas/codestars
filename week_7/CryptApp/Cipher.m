@@ -30,14 +30,11 @@
     return self;
 }
 
-- (Cipher *) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name{
+- (NSMutableDictionary*) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name{
+
+    [currentCipher setValue:name forKey:@"name"];
     
-    
-    
-    
-    currentCipher = [NSMutableDictionary dictionaryWithObjectsAndKeys:name, @"name", currentCipher, @"cipher", nil];
-   
-    return (Cipher *)currentCipher;
+    return currentCipher;
     
     
 }

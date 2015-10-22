@@ -61,7 +61,7 @@
      
      }
     
-    NSLog(@"%@", self.cipher);
+    NSLog(@"cipher: %@", self.cipher);
     
     return self.cipher;
     
@@ -80,7 +80,7 @@
         [self.userInputChars addObject:ichar];
     }
     
-    NSLog(@"%@", self.userInputChars);
+    NSLog(@"user input chars: %@", self.userInputChars);
 }
 
 - (void) charsToCipherKeys {
@@ -119,7 +119,7 @@
         
     
     }
-    NSLog(@"%@", self.charsToKeys);
+    NSLog(@"chars to keys:%@", self.charsToKeys);
 }
 - (void) cipherKeysToChars {
 
@@ -149,7 +149,7 @@
         }
         
     }
-    NSLog(@"%@", self.keysToChars);
+    NSLog(@"keys to chars:%@", self.keysToChars);
 }
 
 - (void) cipherCharsToStandardKeys {
@@ -188,7 +188,7 @@
         
         
     }
-    NSLog(@"%@", self.charsToKeys);
+    NSLog(@"chars to keys: %@", self.charsToKeys);
 }
 - (void)standardKeysToChars {
     
@@ -218,7 +218,7 @@
         }
         
     }
-    NSLog(@"%@", self.keysToChars);
+    NSLog(@"keys to chars: %@", self.keysToChars);
 }
 
 
@@ -226,19 +226,19 @@
 - (NSString *) arrayToString {
     
     NSString * result = [[self.keysToChars valueForKey:@"description"] componentsJoinedByString:@""];
-    NSLog(@"%@", result);
+    NSLog(@"array to string: %@", result);
     
     return result;
 }
 
 
 
-- (Cipher *) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name
+- (NSMutableDictionary*) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name
 {
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:name, @"name", currentCipher, @"cipher", nil];
     
-    return (Cipher *)dict;
+    return dict;
     
 }
 
@@ -255,11 +255,11 @@
     
     NSString *result = [self arrayToString];
    
-    Cipher *updatedCipher = [[Cipher alloc]updateCipher:self.cipher withName:_cipherName];
+    NSMutableDictionary *updatedCipher = [[Cipher alloc]updateCipher:self.cipher withName:_cipherName];
     
     [[SharedCipher sharedInstance]addCipher:updatedCipher];
     
-    NSLog(@"%@", result);
+    NSLog(@"ENCODED TEXT: %@", result);
     
     return result;
     
@@ -286,29 +286,6 @@
     
     return result;
     
-}
-
--(void) saveCipher :(NSString *) name {
-    
-    
-    
-//    //how do I initialize this the first time and never again?
-//    if (!self.activeCiphers)
-//        self.activeCiphers = [NSMutableDictionary dictionary];
-// 
-//  
-//    self.cipherName = name;
-//    
-//    NSMutableDictionary *cipherToSave = self.cipher;
-//    
-//    [cipherToSave setObject:self.cipherName forKey:@"name"];
-//    
-//    [self.activeCiphers  setObject:cipherToSave forKey:self.cipherName];
-//    
-//    
-//    NSLog(@"ACTIVE CIPHERS%@", self.activeCiphers);
-    
-
 }
 
 
