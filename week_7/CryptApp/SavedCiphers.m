@@ -9,8 +9,9 @@
 #import "SavedCiphers.h"
 
 @interface SavedCiphers () {
-    // an mut dictionary of saved ciphers
+    // an mut array of saved ciphers
     NSMutableArray *ciphers;
+    NSDictionary *sample;
 }
 @end
 
@@ -22,7 +23,7 @@
     if (self) {
         // a dummy list of ciphers
         
-        ciphers = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        sample = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                    @"Sample", @"name",
                    @"a", @1,
                    @"b",@2,
@@ -76,7 +77,10 @@
                    @"X",@50,
                    @"Y",@51,
                    @"Z",@52, nil];
-                   
+        
+        ciphers = [[NSMutableArray alloc] initWithObjects:sample, nil];
+        
+        
     }
     return self;
 }
@@ -85,15 +89,16 @@
     return ciphers;
 }
 
-- (void)addCipher:(Encoder*)cipher withName:(NSString*)name
+- (void)addCipher:(Encoder*)cipher atIndex:(int)index
 {
     
-    [ciphers setValue:cipher forKey:name];
+        [ciphers insertObject:cipher atIndex:index];
+    }
+
+- (void)deleteCipherAtIndex:(int)index
+{
+    [ciphers removeObjectAtIndex:index];
 }
 
-- (void)deleteCipherWithName:(NSString*)name
-{
-    [ciphers removeObjectForKey:name];
-}
 
 @end

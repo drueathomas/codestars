@@ -12,10 +12,10 @@
 
 @interface SavedCiphers : NSObject
 
-- (NSMutableDictionary*)getCiphers;
+- (NSMutableArray*)getCiphers;
 
-- (void)addCipher:(Encoder*)cipher withName:(NSString*)name;
+- (void)addCipher:(Encoder*)cipher atIndex:(int)index;
 
-- (void)deleteCipherWithName:(NSString*)name;
+- (void)deleteCipherAtIndex:(int)index;
 
 @end

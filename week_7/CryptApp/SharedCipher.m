@@ -43,21 +43,25 @@
     return _sharedInstance;
 }
 
-- (NSMutableDictionary*)getCiphers
+
+
+- (NSArray*)getCiphers
 {
     return [savedCiphers getCiphers];
 }
 
-- (void)addCipher:(Encoder*)cipher withName:(NSString*)name
+- (void)addCipher:(Encoder*)cipher atIndex:(int)index
 {
     
-    return [savedCiphers setValue:cipher forKey:name];
+    [savedCiphers addCipher:cipher atIndex:index];
 }
 
-- (void)deleteCipherWithName:(NSString*)name
+- (void)deleteCipherAtIndex:(int)index
 {
-    return [savedCiphers deleteCipherWithName:name];
+    [savedCiphers deleteCipherAtIndex:index];
+
 }
+
 
 
 
