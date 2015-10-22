@@ -20,6 +20,7 @@
 @property (nonatomic) NSString *cipherName;
 @property (nonatomic) NSString *userInput;
 @property (strong, nonatomic) NSString * encodedText;
+@property (nonatomic) NSMutableDictionary* cipher;
 
 
 @end

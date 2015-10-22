@@ -12,7 +12,9 @@
 #import "EncodedTextViewController.h"
 #import "DecodedTextViewController.h"
 
-@interface DetailCipherViewController ()
+@interface DetailCipherViewController (){
+    Encoder *c1;
+}
 
 @end
 
@@ -20,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Encoder *c1 = [[Encoder alloc] init];
     self.cipherNameLabel.text = self.cipherName;
     self.userInput = self.alterTextView.text;
     
@@ -36,11 +39,11 @@
 
 - (NSString *) decodeUserInput : (NSString *) userInput forCipher: (NSMutableDictionary *)cipher withName: (NSString *) name{
     
-    _cipherName = name;
+    self.cipherName = name;
     
     
     Encoder *c = [[Encoder alloc] init];
-    c.cipher = cipher;
+    self.cipher = cipher;
     
     [c userInputToChars: userInput];
     
@@ -59,7 +62,6 @@
 
     _cipherName = name;
     
-    Encoder *c1 = [[Encoder alloc] init];
     c1.cipher = cipher;
     
     [c1 userInputToChars: userInput];
@@ -83,6 +85,8 @@
     NSMutableArray *allCiphers = [[SharedCipher sharedInstance] getCiphers];
     NSMutableDictionary *storedCipher = [NSMutableDictionary dictionary];
     
+    [c1 generateStandardAlphabet];
+    
     NSString *key = @"name";
     
     NSString *name = self.cipherName;
@@ -92,8 +96,6 @@
            storedCipher = dict;
     }
     
-    
-    Encoder *c1 = [[Encoder alloc] init];
 
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
         self.encodedText = [c1 encodeUserInput:self.userInput forCipher:storedCipher withName:self.cipherName];
