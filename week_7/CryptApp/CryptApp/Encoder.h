@@ -8,26 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol EncoderProtocol
 
--(void)setup;
+@interface Encoder : NSObject
 
-@end
 
-@interface Encoder : NSObject <EncoderProtocol>
-
-+ (id<EncoderProtocol>)sharedInstance;
-
-@property (nonatomic, strong) NSMutableDictionary* standardAlphabet;
-@property (nonatomic, strong) NSMutableDictionary* cipher;
-@property (nonatomic, strong) NSMutableDictionary* activeCiphers;
-@property (nonatomic, strong) NSMutableArray* charsToKeys;
-@property (nonatomic, strong) NSMutableArray* userInputChars;
-@property (nonatomic, strong) NSMutableArray* exclude;
-@property (nonatomic, strong) NSMutableArray* keysToChars;
+@property (nonatomic) NSMutableDictionary* standardAlphabet;
+@property (nonatomic) NSMutableDictionary* cipher;
+@property (nonatomic) NSMutableArray* charsToKeys;
+@property (nonatomic) NSMutableArray* userInputChars;
+@property (nonatomic) NSMutableArray* exclude;
+@property (nonatomic) NSMutableArray* keysToChars;
 @property (nonatomic) NSInteger topOfRange;
-@property (nonatomic, strong) NSString * encodedText;
-@property (nonatomic, strong) NSArray *alphabet;
+@property (nonatomic) NSString * encodedText;
+@property (nonatomic) NSArray *alphabet;
 @property (nonatomic) NSString *cipherName;
 
 //methods

@@ -10,7 +10,7 @@
 
 @interface SavedCiphers () {
     // an mut dictionary of saved ciphers
-    NSMutableDictionary *ciphers;
+    NSMutableArray *ciphers;
 }
 @end
 
@@ -80,7 +80,7 @@
     }
     return self;
 }
-- (NSMutableDictionary*)getCiphers
+- (NSArray*)getCiphers
 {
     return ciphers;
 }

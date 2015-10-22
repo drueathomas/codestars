@@ -10,25 +10,33 @@
 #import "CipherTableViewCell.h"
 #import "Encoder.h"
 #import "DetailCipherTableViewController.h"
-
-@interface CipherTableViewController ()
+#import "SharedCipher.h"
+@interface CipherTableViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
 @implementation CipherTableViewController
 {
+    
+    //holds all of the active ciphers
+    NSMutableArray *allCiphers;
+    
+    //holds current ciphers name
+   NSString *currentCipherName;
+//    NSString *currentCipherImage;
+    
+//    //holds current cipher name and image
+    NSDictionary *currentCipherData;
     NSMutableArray *cipherNames;
-    NSMutableArray *cipherImages;
+   // NSMutableArray *cipherImages;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    cipherNames = [[NSMutableArray alloc] initWithObjects:@"Drue", @"Yurm", @"Mom", nil];
     
-    
-    cipherImages = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],[UIImage imageNamed:@"padlock_open.png"],nil];
+    allCiphers = [NSMutableArray arrayWithObjects:[[SharedCipher sharedInstance] getCiphers], nil];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -55,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return [cipherNames count];
+    return [allCiphers count];
 }
 
 
@@ -67,9 +75,12 @@
     
     CipherTableViewCell *cell = (CipherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.cipherNameLabel.text = [cipherNames objectAtIndex:indexPath.row];
     
-    cell.thumbnailImageView.image = [UIImage imageNamed:[cipherImages objectAtIndex:indexPath.row]];
+    
+    
+    cell.cipherNameLabel.text = currentCipherData [@"name"][indexPath.row];
+    
+    cell.thumbnailImageView.image = [UIImage imageNamed:[allCiphers objectForKey:currentCipherImage]];
     return cell;
 }
 /*

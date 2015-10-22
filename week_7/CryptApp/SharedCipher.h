@@ -13,7 +13,7 @@
 
 +(SharedCipher *)sharedInstance;
 
-- (NSMutableDictionary*)getCiphers;
+- (NSMutableArray*)getCiphers;
 
 - (void)addCipher:(Encoder *)cipher withName: (NSString*)name;
 

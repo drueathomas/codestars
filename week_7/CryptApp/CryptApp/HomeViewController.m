@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "Encoder.h"
 #import "EncodedTextViewController.h"
+#import "SharedCipher.h"
 
 
 @interface HomeViewController ()

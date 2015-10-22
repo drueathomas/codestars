@@ -17,6 +17,15 @@
 @end
 
 @implementation SharedCipher
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        savedCiphers = [[SavedCiphers alloc] init];
+        
+    }
+    return self;
+}
 
 
 + (SharedCipher *)sharedInstance
@@ -32,15 +41,6 @@
         _sharedInstance = [[SharedCipher alloc] init];
     });
     return _sharedInstance;
-}
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        savedCiphers = [[SavedCiphers alloc] init];
-        
-    }
-    return self;
 }
 
 - (NSMutableDictionary*)getCiphers

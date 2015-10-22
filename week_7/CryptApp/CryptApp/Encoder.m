@@ -264,21 +264,24 @@
 }
 
 -(void) saveCipher :(NSString *) name {
-    //how do I initialize this the first time and never again?
-    if (!self.activeCiphers)
-        self.activeCiphers = [NSMutableDictionary dictionary];
- 
-  
-    self.cipherName = name;
-    
-    NSMutableDictionary *cipherToSave = self.cipher;
-    
-    [cipherToSave setObject:self.cipherName forKey:@"name"];
-    
-    [self.activeCiphers  setObject:cipherToSave forKey:self.cipherName];
     
     
-    NSLog(@"ACTIVE CIPHERS%@", self.activeCiphers);
+    
+//    //how do I initialize this the first time and never again?
+//    if (!self.activeCiphers)
+//        self.activeCiphers = [NSMutableDictionary dictionary];
+// 
+//  
+//    self.cipherName = name;
+//    
+//    NSMutableDictionary *cipherToSave = self.cipher;
+//    
+//    [cipherToSave setObject:self.cipherName forKey:@"name"];
+//    
+//    [self.activeCiphers  setObject:cipherToSave forKey:self.cipherName];
+//    
+//    
+//    NSLog(@"ACTIVE CIPHERS%@", self.activeCiphers);
     
 
 }
