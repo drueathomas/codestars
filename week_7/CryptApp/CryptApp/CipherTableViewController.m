@@ -33,7 +33,7 @@
     
     
     allCiphers = [[SharedCipher sharedInstance] getCiphers];
-    
+    currentCipherIndex = 0;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,6 +50,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)addCipher:(Encoder*)cipher atIndex:(int)index
+{
+    [[SharedCipher sharedInstance] addCipher:cipher atIndex:index];
+    currentCipherIndex = index;
+    
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:
+(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [[SharedCipher sharedInstance] deleteCipherAtIndex:indexPath.row];
+    [tableView reloadData];
+    
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -61,6 +77,7 @@
 
     return [allCiphers count];
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:

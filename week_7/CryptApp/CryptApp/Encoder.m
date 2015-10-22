@@ -7,7 +7,7 @@
 //
 
 #import "Encoder.h"
-#import "SavedCiphers.h"
+#import "SharedCipher.h"
 
 
 @implementation Encoder
@@ -286,6 +286,8 @@
     
 
 }
+
+- (void) 
 
 
 @end

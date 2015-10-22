@@ -16,6 +16,7 @@
 		E307E4471BADFB5200FF1979 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4461BADFB5200FF1979 /* Encoder.m */; };
 		E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F61BD8925D00729277 /* SharedCipher.m */; settings = {ASSET_TAGS = (); }; };
 		E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F91BD8929200729277 /* SavedCiphers.m */; settings = {ASSET_TAGS = (); }; };
+		E31EE5011BD8C4DB00729277 /* Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE5001BD8C4DB00729277 /* Cipher.m */; settings = {ASSET_TAGS = (); }; };
 		E322C6891BBD08AF001B58ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E322C6871BBD08AD001B58ED /* Main.storyboard */; };
 		E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C30E1BD246B300D229A0 /* CipherTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C3111BD2475F00D229A0 /* CipherTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -52,6 +53,8 @@
 		E31EE4F61BD8925D00729277 /* SharedCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedCipher.m; path = ../SharedCipher.m; sourceTree = "<group>"; };
 		E31EE4F81BD8929200729277 /* SavedCiphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedCiphers.h; path = ../SavedCiphers.h; sourceTree = "<group>"; };
 		E31EE4F91BD8929200729277 /* SavedCiphers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedCiphers.m; path = ../SavedCiphers.m; sourceTree = "<group>"; };
+		E31EE4FF1BD8C4DB00729277 /* Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cipher.h; sourceTree = "<group>"; };
+		E31EE5001BD8C4DB00729277 /* Cipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cipher.m; sourceTree = "<group>"; };
 		E322C6881BBD08AE001B58ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E328C30D1BD246B300D229A0 /* CipherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherTableViewController.h; sourceTree = "<group>"; };
 		E328C30E1BD246B300D229A0 /* CipherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherTableViewController.m; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			children = (
 				E307E4451BADFB5200FF1979 /* Encoder.h */,
 				E307E4461BADFB5200FF1979 /* Encoder.m */,
+				E31EE4FF1BD8C4DB00729277 /* Cipher.h */,
+				E31EE5001BD8C4DB00729277 /* Cipher.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				E38BD43A1BD2D2B1008B1E2B /* DetailCipherTableViewController.m in Sources */,
 				3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */,
 				E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */,
+				E31EE5011BD8C4DB00729277 /* Cipher.m in Sources */,
 				E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */,
 				E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */,
 				E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */,
