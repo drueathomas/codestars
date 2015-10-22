@@ -15,8 +15,8 @@
 
 
 
-//- (NSMutableDictionary *) updateCipher;
-//- (id)initWithName:(NSString*)name andCipherDict: (NSMutableDictionary *) dict;
+- (Cipher*) updateCipher:(NSMutableDictionary *)cipher withName: (NSString *)name;
+- (id)initWithName:(NSString*)name andCipherDict: (Cipher *) dict;
 
 @end
 

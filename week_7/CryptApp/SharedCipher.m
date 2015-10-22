@@ -50,10 +50,10 @@
     return [savedCiphers getCiphers];
 }
 
-- (void)addCipher:(Cipher*)cipher atIndex:(int)index
+- (void)addCipher:(Cipher*)cipher
 {
     
-    [savedCiphers addCipher:cipher atIndex:index];
+    [savedCiphers addCipher:cipher];
 }
 
 - (void)deleteCipherAtIndex:(int)index

@@ -15,7 +15,7 @@
 
 - (NSMutableArray*)getCiphers;
 
-- (void)addCipher:(Cipher*)cipher atIndex:(int)index;
+- (void)addCipher:(Cipher*)cipher;
 
 - (void)deleteCipherAtIndex:(int)index;
 

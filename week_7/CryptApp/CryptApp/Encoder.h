@@ -27,7 +27,7 @@
 
 - (void) generateStandardAlphabet;
 - (void) generateRandomNumberSet;
-- (void) generateCipher;
+- (NSMutableDictionary *) generateCipher;
 - (void) userInputToChars : (NSString *) userInput;
 - (void) charsToCipherKeys;
 - (void) cipherKeysToChars;
@@ -36,10 +36,10 @@
 - (NSString *) arrayToString;
 
 //encoding use input package
-- (NSString *) encodeUserInput : (NSString *) userInput : (NSString *) name;
+- (NSString *) encodeUserInput : (NSString *) userInput forCipher: (NSMutableDictionary *)cipher withName: (NSString *) name;
 
 //decode user input
--(NSString *) decodeUserInput : (NSString *) userInput : (NSString *) name;
+- (NSString *) decodeUserInput : (NSString *) userInput forCipher: (NSMutableDictionary *)cipher withName: (NSString *) name;
 
 //save the cipher
 

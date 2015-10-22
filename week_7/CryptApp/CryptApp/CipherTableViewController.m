@@ -9,8 +9,9 @@
 #import "CipherTableViewController.h"
 #import "CipherTableViewCell.h"
 #import "Encoder.h"
-#import "DetailCipherTableViewController.h"
+#import "DetailCipherViewController.h"
 #import "SharedCipher.h"
+
 @interface CipherTableViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -21,7 +22,6 @@
     
     NSMutableArray *allCiphers;
     NSString *currentCipherName;
-    int currentCipherIndex;
     NSDictionary *currentCipherData;
     
 }
@@ -33,7 +33,8 @@
     
     
     allCiphers = [[SharedCipher sharedInstance] getCiphers];
-    currentCipherIndex = 0;
+    NSLog(@"All Ciphers: %@", allCiphers);
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,10 +51,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addCipher:(Cipher*)cipher atIndex:(int)index
+- (void)addCipher:(Cipher*)cipher
 {
-    [[SharedCipher sharedInstance] addCipher:cipher atIndex:index];
-    currentCipherIndex = index;
+    
+    [[SharedCipher sharedInstance] addCipher:cipher];
+     NSLog(@"Added cipher: %@", cipher);
+    
+    NSMutableArray *myCiphers = [[SharedCipher sharedInstance] getCiphers];
+    NSLog(@"SharedInstance: %@", myCiphers);
+    
+    
+}
+
+- (NSMutableDictionary *) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name
+{
+    
+    currentCipher = [NSMutableDictionary dictionaryWithObjectsAndKeys: name, @"name", currentCipher, @"cipher", nil];
+    
+    return currentCipher;
+
     
 }
 
@@ -140,7 +156,7 @@ if([segue.identifier isEqualToString: @"showDetailView"]){
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    DetailCipherTableViewController *dest = segue.destinationViewController;
+    DetailCipherViewController *dest = segue.destinationViewController;
     
     dest.cipherName = [[allCiphers objectAtIndex:indexPath.row]objectForKey:@"name"];
     

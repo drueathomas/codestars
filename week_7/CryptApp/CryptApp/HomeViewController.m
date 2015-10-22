@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     self.userInput = self.textToEncode.text;
+    self.cipherName = self.cipherNameInput.text;
     
     [self.view addSubview:self.generateCipherButton];
 }
@@ -77,9 +78,9 @@
     
     [c1 generateRandomNumberSet];
     
-    [c1 generateCipher];
+    NSMutableDictionary *c = [c1 generateCipher];
     
-    self.encodedText = [c1 encodeUserInput:self.userInput: self.cipherName];
+    self.encodedText = [c1 encodeUserInput:self.userInput forCipher:c withName:self.cipherName];
     
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
         

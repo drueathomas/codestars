@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKY-V7-u0g">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -46,13 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Crypt!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-kP-IRW">
-                                <rect key="frame" x="84" y="108" width="143" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-5Q-mU1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-5Q-mU1">
                                 <rect key="frame" x="86" y="430" width="148" height="30"/>
                                 <state key="normal" title="Generate New Cipher"/>
                                 <connections>
@@ -60,38 +53,47 @@
                                     <segue destination="t8d-Lo-bS5" kind="push" identifier="showEncodedText" id="OIF-pz-8r2"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="JsG-M2-QC8">
                                 <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-pn-NBF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Text to Encode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-pn-NBF">
                                 <rect key="frame" x="53" y="164" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Save As..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBB-Gj-XcE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Save As..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBB-Gj-XcE">
                                 <rect key="frame" x="53" y="383" width="227" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Crypt!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-kP-IRW">
+                                <rect key="frame" x="89" y="107" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cBK-MB-IB9" firstAttribute="top" secondItem="Taf-5Q-mU1" secondAttribute="bottom" constant="189" id="0rP-87-83S"/>
-                            <constraint firstItem="XWk-kP-IRW" firstAttribute="top" secondItem="U35-SU-JAm" secondAttribute="bottom" constant="49" id="16t-Wv-j1y"/>
-                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="top" secondItem="JsG-M2-QC8" secondAttribute="bottom" constant="40" id="2hk-61-Sfd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JsG-M2-QC8" secondAttribute="trailing" constant="20" id="5U3-Qe-Tjb"/>
-                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="33" id="D8X-DP-T2q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xvu-pn-NBF" secondAttribute="trailing" constant="33" id="FQx-Hb-5Pe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XWk-kP-IRW" secondAttribute="trailing" constant="73" id="HNc-hx-C9r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Taf-5Q-mU1" secondAttribute="trailing" constant="66" id="Qfb-rw-sVT"/>
-                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="66" id="XS5-fb-LhK"/>
-                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="top" secondItem="XWk-kP-IRW" secondAttribute="bottom" constant="49" id="dBq-85-eis"/>
-                            <constraint firstItem="JsG-M2-QC8" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="20" id="jJ8-Yc-B21"/>
-                            <constraint firstItem="XWk-kP-IRW" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="73" id="qCO-wE-Ied"/>
-                            <constraint firstItem="JsG-M2-QC8" firstAttribute="top" secondItem="Xvu-pn-NBF" secondAttribute="bottom" constant="21" id="vaE-oB-84I"/>
+                            <constraint firstItem="XWk-kP-IRW" firstAttribute="top" secondItem="U35-SU-JAm" secondAttribute="bottom" constant="43" id="0yD-ql-zei"/>
+                            <constraint firstItem="aBB-Gj-XcE" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="37" id="Bhy-0R-5Wn"/>
+                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="top" secondItem="XWk-kP-IRW" secondAttribute="bottom" constant="36" id="Ebd-YL-OXH"/>
+                            <constraint firstItem="JsG-M2-QC8" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="24" id="HMr-mu-wc3"/>
+                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="70" id="Ixm-fR-ASX"/>
+                            <constraint firstItem="JsG-M2-QC8" firstAttribute="top" secondItem="Xvu-pn-NBF" secondAttribute="bottom" constant="35" id="MGN-12-3hE"/>
+                            <constraint firstItem="Xvu-pn-NBF" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="37" id="PT0-W7-a44"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JsG-M2-QC8" secondAttribute="trailing" constant="24" id="TcV-dl-X9Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xvu-pn-NBF" secondAttribute="trailing" constant="37" id="V2k-ie-8rI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aBB-Gj-XcE" secondAttribute="trailing" constant="24" id="dAm-nv-fHI"/>
+                            <constraint firstItem="Taf-5Q-mU1" firstAttribute="top" secondItem="aBB-Gj-XcE" secondAttribute="bottom" constant="17" id="dfd-js-jWt"/>
+                            <constraint firstItem="aBB-Gj-XcE" firstAttribute="top" secondItem="JsG-M2-QC8" secondAttribute="bottom" constant="35" id="e36-Lm-Vxd"/>
+                            <constraint firstItem="cBK-MB-IB9" firstAttribute="top" secondItem="Taf-5Q-mU1" secondAttribute="bottom" constant="59" id="rz8-oy-RVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XWk-kP-IRW" secondAttribute="trailing" constant="72" id="sre-DT-0bh"/>
+                            <constraint firstItem="XWk-kP-IRW" firstAttribute="leading" secondItem="yjW-xP-zi5" secondAttribute="leadingMargin" constant="73" id="vcz-XP-8PY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Taf-5Q-mU1" secondAttribute="trailing" constant="70" id="vhz-FN-IOA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0qQ-C9-EfR"/>
@@ -116,23 +118,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="md2-Zu-2qY" customClass="CipherTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="md2-Zu-2qY" customClass="CipherTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="md2-Zu-2qY" id="Bd7-Ga-yQf">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whK-9x-NIh">
-                                            <rect key="frame" x="134" y="26" width="100" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whK-9x-NIh">
+                                            <rect key="frame" x="105" y="40" width="162" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-P2-HwJ">
-                                            <rect key="frame" x="15" y="8" width="111" height="59"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-P2-HwJ">
+                                            <rect key="frame" x="20" y="20" width="62" height="59"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="whK-9x-NIh" secondAttribute="trailing" constant="12" id="Mkp-nQ-Pwl"/>
+                                        <constraint firstItem="whK-9x-NIh" firstAttribute="leading" secondItem="IkQ-P2-HwJ" secondAttribute="trailing" constant="23" id="Noy-jS-WUg"/>
+                                        <constraint firstItem="IkQ-P2-HwJ" firstAttribute="top" secondItem="Bd7-Ga-yQf" secondAttribute="topMargin" constant="12" id="gtm-Uz-Jeo"/>
+                                        <constraint firstItem="IkQ-P2-HwJ" firstAttribute="leading" secondItem="Bd7-Ga-yQf" secondAttribute="leadingMargin" constant="12" id="nUK-yo-BTx"/>
+                                        <constraint firstItem="whK-9x-NIh" firstAttribute="top" secondItem="Bd7-Ga-yQf" secondAttribute="topMargin" constant="32" id="s5i-bz-wYc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="whK-9x-NIh" secondAttribute="bottom" constant="30" id="s6c-XC-P3u"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IkQ-P2-HwJ" secondAttribute="bottom" constant="12" id="snb-HN-KCx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cipherNameLabel" destination="whK-9x-NIh" id="1qM-ka-QzS"/>
@@ -150,12 +161,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-Dz-dNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="1161"/>
+            <point key="canvasLocation" x="1820" y="1159"/>
         </scene>
-        <!--Detail Cipher Table View Controller-->
+        <!--Detail Cipher View Controller-->
         <scene sceneID="fVg-0Z-e6d">
             <objects>
-                <viewController id="qLs-6K-wD0" customClass="DetailCipherTableViewController" sceneMemberID="viewController">
+                <viewController id="qLs-6K-wD0" customClass="DetailCipherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kCJ-wa-jGr"/>
                         <viewControllerLayoutGuide type="bottom" id="tV3-6k-WbG"/>
@@ -164,34 +175,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hao-E3-HLn">
-                                <rect key="frame" x="46" y="130" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Enter Text Here..." translatesAutoresizingMaskIntoConstraints="NO" id="hao-E3-HLn">
+                                <rect key="frame" x="40" y="181" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edU-3N-TfR">
-                                <rect key="frame" x="90" y="322" width="52" height="30"/>
-                                <state key="normal" title="Encode"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-Tx-Y9e">
-                                <rect key="frame" x="176" y="322" width="54" height="30"/>
-                                <state key="normal" title="Decode"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cipher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-pd-6VL">
-                                <rect key="frame" x="116" y="72" width="100" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cipher Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-pd-6VL">
+                                <rect key="frame" x="107" y="101" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edU-3N-TfR">
+                                <rect key="frame" x="72" y="377" width="60" height="30"/>
+                                <state key="normal" title="Encode"/>
+                                <connections>
+                                    <segue destination="t8d-Lo-bS5" kind="push" identifier="showEncodedText" id="sfg-3U-Ing"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-Tx-Y9e">
+                                <rect key="frame" x="194" y="377" width="54" height="30"/>
+                                <state key="normal" title="Decode"/>
+                                <connections>
+                                    <segue destination="NbS-un-9pn" kind="push" identifier="showDecodedText" id="GeE-Fn-txg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hao-E3-HLn" firstAttribute="top" secondItem="RjC-pd-6VL" secondAttribute="bottom" constant="59" id="1Io-gF-WOr"/>
+                            <constraint firstItem="tV3-6k-WbG" firstAttribute="top" secondItem="edU-3N-TfR" secondAttribute="bottom" constant="111" id="6rf-zA-ExS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTh-Tx-Y9e" secondAttribute="trailing" constant="68" id="Bah-w0-PCh"/>
+                            <constraint firstItem="RjC-pd-6VL" firstAttribute="leading" secondItem="INF-4Q-qhH" secondAttribute="leadingMargin" constant="91" id="EAd-Tx-BUD"/>
+                            <constraint firstItem="RjC-pd-6VL" firstAttribute="top" secondItem="kCJ-wa-jGr" secondAttribute="bottom" constant="37" id="ICC-1d-G0k"/>
+                            <constraint firstItem="fTh-Tx-Y9e" firstAttribute="leading" secondItem="edU-3N-TfR" secondAttribute="trailing" constant="37" id="IeC-cE-M5w"/>
+                            <constraint firstItem="edU-3N-TfR" firstAttribute="leading" secondItem="INF-4Q-qhH" secondAttribute="leadingMargin" constant="69" id="OkI-9m-dqc"/>
+                            <constraint firstItem="tV3-6k-WbG" firstAttribute="top" secondItem="fTh-Tx-Y9e" secondAttribute="bottom" constant="111" id="Qys-Zd-aen"/>
+                            <constraint firstItem="fTh-Tx-Y9e" firstAttribute="top" secondItem="hao-E3-HLn" secondAttribute="bottom" constant="69" id="TNq-9i-ogA"/>
+                            <constraint firstItem="hao-E3-HLn" firstAttribute="leading" secondItem="INF-4Q-qhH" secondAttribute="leadingMargin" constant="24" id="ZuH-Ye-0Z2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RjC-pd-6VL" secondAttribute="trailing" constant="91" id="rZq-D7-038"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hao-E3-HLn" secondAttribute="trailing" constant="24" id="riA-uD-3Fz"/>
+                            <constraint firstItem="edU-3N-TfR" firstAttribute="top" secondItem="hao-E3-HLn" secondAttribute="bottom" constant="69" id="zcc-BZ-rK9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3fU-yO-mcx"/>
                     <connections>
-                        <outlet property="alterTextView" destination="hao-E3-HLn" id="lhU-7f-ACP"/>
-                        <outlet property="cipherNameLabel" destination="RjC-pd-6VL" id="pE5-y3-VKV"/>
-                        <outlet property="decodeButton" destination="fTh-Tx-Y9e" id="Obm-lN-Kuw"/>
-                        <outlet property="encodeButton" destination="edU-3N-TfR" id="8bv-82-dwW"/>
+                        <outlet property="alterTextView" destination="hao-E3-HLn" id="adz-3D-EH9"/>
+                        <outlet property="cipherNameLabel" destination="RjC-pd-6VL" id="EFd-lx-Yha"/>
+                        <outlet property="decodeButton" destination="fTh-Tx-Y9e" id="3Rw-r4-NDW"/>
+                        <outlet property="encodeButton" destination="edU-3N-TfR" id="wnn-Hw-jWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-yE-AyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,39 +262,6 @@
             </objects>
             <point key="canvasLocation" x="1796" y="2656"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Luz-65-1aq">
-            <objects>
-                <viewController id="1MR-vk-DNy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iyN-Gh-HEu"/>
-                        <viewControllerLayoutGuide type="bottom" id="8uH-UV-46l"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1O8-CH-BYd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Encoded Text Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-Qp-kZ4">
-                                <rect key="frame" x="25" y="78" width="270" height="166"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJN-A6-Uea">
-                                <rect key="frame" x="137" y="264" width="36" height="30"/>
-                                <state key="normal" title="Copy"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jJN-A6-Uea" firstAttribute="top" secondItem="pW8-Qp-kZ4" secondAttribute="bottom" constant="20" id="peu-Dk-LiW"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8yP-dG-A2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2313" y="1971"/>
-        </scene>
         <!--Encoded Text View Controller-->
         <scene sceneID="68D-am-ogl">
             <objects>
@@ -275,29 +274,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
-                                <rect key="frame" x="145" y="327" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-GG-aV3">
+                                <rect key="frame" x="145" y="362" width="45" height="30"/>
                                 <state key="normal" title="Copy"/>
                                 <connections>
                                     <action selector="copyText" destination="t8d-Lo-bS5" eventType="touchUpInside" id="WFE-KR-YtO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Encoded Text..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
-                                <rect key="frame" x="29" y="108" width="262" height="177"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Encoded Text..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-yn-Gep">
+                                <rect key="frame" x="29" y="143" width="262" height="177"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ODX-GG-aV3" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="122" id="Adh-Te-qOY"/>
-                            <constraint firstItem="ODX-GG-aV3" firstAttribute="top" secondItem="Fsy-yn-Gep" secondAttribute="bottom" constant="118" id="Mg1-4Y-RRk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fsy-yn-Gep" secondAttribute="trailing" constant="117" id="bAN-Q3-mQD"/>
-                            <constraint firstItem="Fsy-yn-Gep" firstAttribute="leading" secondItem="xkt-WE-sKu" secondAttribute="leadingMargin" constant="129" id="bS2-7H-gsG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ODX-GG-aV3" secondAttribute="trailing" constant="122" id="kRj-sh-IXw"/>
-                            <constraint firstItem="Fsy-yn-Gep" firstAttribute="top" secondItem="1dL-Nc-Akd" secondAttribute="bottom" constant="110" id="lDX-F2-1gI"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Sj-tT-QY4"/>
                     <connections>
@@ -368,5 +359,51 @@
             </objects>
             <point key="canvasLocation" x="1288" y="1161"/>
         </scene>
+        <!--Decoded Text View Controller-->
+        <scene sceneID="XwM-WH-pey">
+            <objects>
+                <viewController id="NbS-un-9pn" customClass="DecodedTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afJ-rN-Bbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="t58-cf-zKp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FYq-Oc-ffs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decoded Text Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bm-lw-Cik">
+                                <rect key="frame" x="25" y="126" width="270" height="166"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qq-Fl-Dpq">
+                                <rect key="frame" x="141" y="352" width="39" height="30"/>
+                                <state key="normal" title="Copy"/>
+                                <connections>
+                                    <action selector="copyText" destination="NbS-un-9pn" eventType="touchUpInside" id="lhA-KG-3Xg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ywC-nm-Nod"/>
+                    <connections>
+                        <outlet property="cipherCopyButton" destination="6qq-Fl-Dpq" id="PlO-fu-5T4"/>
+                        <outlet property="decodedTextLabel" destination="2bm-lw-Cik" id="Rz7-xh-dji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="de0-o9-uXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="1460"/>
+        </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="sfg-3U-Ing"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -81,6 +81,7 @@
         
         if (ciphers == nil)
             ciphers = [[NSMutableArray alloc] initWithObjects:sample, nil];
+      
         
         
         
@@ -92,19 +93,13 @@
     return ciphers;
 }
 
--(void)addCipher{
-    
+
+- (void)addCipher:(Cipher*)cipher
+{
+
+    [ciphers addObject:cipher];
     
 }
-
-- (void)addCipher:(Cipher*)cipher atIndex:(int)index
-{
-    
-    if(ciphers.count >= index)
-        [ciphers insertObject:cipher atIndex:index];
-    else
-        [ciphers addObject:cipher];
-    }
 
 - (void)deleteCipherAtIndex:(int)index
 {

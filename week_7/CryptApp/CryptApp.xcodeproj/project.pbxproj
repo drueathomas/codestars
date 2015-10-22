@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */; };
+		3ED3ED8E1BD95440008C1E0B /* DetailCipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED3ED8D1BD95440008C1E0B /* DetailCipherViewController.m */; };
+		3ED3ED911BD9679D008C1E0B /* DecodedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED3ED901BD9679D008C1E0B /* DecodedTextViewController.m */; };
 		E307E41F1BADF2D200FF1979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E41E1BADF2D200FF1979 /* main.m */; };
 		E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4211BADF2D200FF1979 /* AppDelegate.m */; };
 		E307E42A1BADF2D200FF1979 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E307E4291BADF2D200FF1979 /* Images.xcassets */; };
 		E307E42D1BADF2D200FF1979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E307E42B1BADF2D200FF1979 /* LaunchScreen.xib */; };
 		E307E4391BADF2D200FF1979 /* CryptAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4381BADF2D200FF1979 /* CryptAppTests.m */; };
 		E307E4471BADFB5200FF1979 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4461BADFB5200FF1979 /* Encoder.m */; };
-		E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F61BD8925D00729277 /* SharedCipher.m */; settings = {ASSET_TAGS = (); }; };
-		E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F91BD8929200729277 /* SavedCiphers.m */; settings = {ASSET_TAGS = (); }; };
-		E31EE5041BD8C72300729277 /* Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE5031BD8C72300729277 /* Cipher.m */; settings = {ASSET_TAGS = (); }; };
+		E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F61BD8925D00729277 /* SharedCipher.m */; };
+		E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F91BD8929200729277 /* SavedCiphers.m */; };
+		E31EE5041BD8C72300729277 /* Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE5031BD8C72300729277 /* Cipher.m */; };
 		E322C6891BBD08AF001B58ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E322C6871BBD08AD001B58ED /* Main.storyboard */; };
-		E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C30E1BD246B300D229A0 /* CipherTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C3111BD2475F00D229A0 /* CipherTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C30E1BD246B300D229A0 /* CipherTableViewController.m */; };
+		E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C3111BD2475F00D229A0 /* CipherTableViewCell.m */; };
 		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; };
-		E38BD43A1BD2D2B1008B1E2B /* DetailCipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38BD4391BD2D2B1008B1E2B /* DetailCipherTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,10 @@
 /* Begin PBXFileReference section */
 		3EA8D54C1BD005BB00DB54EE /* EncodedTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodedTextViewController.h; sourceTree = "<group>"; };
 		3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodedTextViewController.m; sourceTree = "<group>"; };
+		3ED3ED8C1BD95440008C1E0B /* DetailCipherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCipherViewController.h; sourceTree = "<group>"; };
+		3ED3ED8D1BD95440008C1E0B /* DetailCipherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCipherViewController.m; sourceTree = "<group>"; };
+		3ED3ED8F1BD9679D008C1E0B /* DecodedTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodedTextViewController.h; sourceTree = "<group>"; };
+		3ED3ED901BD9679D008C1E0B /* DecodedTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodedTextViewController.m; sourceTree = "<group>"; };
 		E307E4191BADF2D100FF1979 /* CryptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E307E41D1BADF2D100FF1979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E307E41E1BADF2D200FF1979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,8 +67,6 @@
 		E328C3111BD2475F00D229A0 /* CipherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherTableViewCell.m; sourceTree = "<group>"; };
 		E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		E38BD4381BD2D2B0008B1E2B /* DetailCipherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCipherTableViewController.h; sourceTree = "<group>"; };
-		E38BD4391BD2D2B1008B1E2B /* DetailCipherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCipherTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +166,10 @@
 				3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */,
 				E328C30D1BD246B300D229A0 /* CipherTableViewController.h */,
 				E328C30E1BD246B300D229A0 /* CipherTableViewController.m */,
-				E38BD4381BD2D2B0008B1E2B /* DetailCipherTableViewController.h */,
-				E38BD4391BD2D2B1008B1E2B /* DetailCipherTableViewController.m */,
+				3ED3ED8C1BD95440008C1E0B /* DetailCipherViewController.h */,
+				3ED3ED8D1BD95440008C1E0B /* DetailCipherViewController.m */,
+				3ED3ED8F1BD9679D008C1E0B /* DecodedTextViewController.h */,
+				3ED3ED901BD9679D008C1E0B /* DecodedTextViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,10 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED3ED8E1BD95440008C1E0B /* DetailCipherViewController.m in Sources */,
 				E307E4471BADFB5200FF1979 /* Encoder.m in Sources */,
+				3ED3ED911BD9679D008C1E0B /* DecodedTextViewController.m in Sources */,
 				E307E4221BADF2D200FF1979 /* AppDelegate.m in Sources */,
 				E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */,
-				E38BD43A1BD2D2B1008B1E2B /* DetailCipherTableViewController.m in Sources */,
 				3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */,
 				E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */,
 				E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */,

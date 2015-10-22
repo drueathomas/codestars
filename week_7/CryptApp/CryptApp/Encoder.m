@@ -49,7 +49,7 @@
     }
 }
 
-- (void) generateCipher {
+- (NSMutableDictionary *) generateCipher {
     
     self.cipher = [NSMutableDictionary dictionary];
     
@@ -62,6 +62,8 @@
      }
     
     NSLog(@"%@", self.cipher);
+    
+    return self.cipher;
     
    
 }
@@ -231,16 +233,19 @@
 
 
 
-- (NSMutableDictionary *) updateCipher{
+- (Cipher *) updateCipher:(NSMutableDictionary *)currentCipher withName: (NSString *)name
+{
     
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:name, @"name", currentCipher, @"cipher", nil];
     
-    self.cipher = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.cipherName, @"name", self.cipher, @"cipher", nil];
-    return self.cipher;
+    return (Cipher *)dict;
+    
 }
 
 
-
-- (NSString *) encodeUserInput : (NSString *) userInput :  (NSString *) name{
+- (NSString *) encodeUserInput : (NSString *) userInput forCipher: (NSMutableDictionary *)cipher withName: (NSString *) name{
+    
+    _cipherName = name;
     
     [self userInputToChars: userInput];
     
@@ -250,9 +255,9 @@
     
     NSString *result = [self arrayToString];
    
-    self.cipher = [self updateCipher];
+    Cipher *updatedCipher = [[Cipher alloc]updateCipher:self.cipher withName:_cipherName];
     
-    
+    [[SharedCipher sharedInstance]addCipher:updatedCipher];
     
     NSLog(@"%@", result);
     
@@ -262,7 +267,9 @@
 
 
 
--(NSString *) decodeUserInput : (NSString *) userInput : (NSString *) name{
+- (NSString *) decodeUserInput : (NSString *) userInput forCipher: (NSMutableDictionary *)cipher withName: (NSString *) name{
+    
+    _cipherName = name;
     
     [self userInputToChars: userInput];
     
@@ -272,7 +279,7 @@
     
     NSString *result = [self arrayToString];
     
-    [[SharedCipher sharedInstance] addCipher:[[Cipher alloc]updateCipher] atIndex:index];
+    
     
     NSLog(@"%@", result);
 
