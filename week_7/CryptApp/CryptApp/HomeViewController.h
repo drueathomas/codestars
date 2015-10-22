@@ -16,9 +16,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *instructions;
 @property (weak, nonatomic) IBOutlet UITextField *cipherNameInput;
 
+@property (nonatomic, assign) id currentResponder;
+
 @property (strong, nonatomic) NSString * userInput;
 @property (nonatomic) NSString *cipherName;
 @property (strong, nonatomic) NSString * encodedText;
+
+
 
 
 

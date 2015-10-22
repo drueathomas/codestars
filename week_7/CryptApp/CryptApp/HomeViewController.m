@@ -18,7 +18,7 @@
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -27,6 +27,12 @@
     self.cipherName = self.cipherNameInput.text;
     
     [self.view addSubview:self.generateCipherButton];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignOnTap:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [singleTap setNumberOfTouchesRequired:1];
+    [self.view addGestureRecognizer:singleTap];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,27 +45,33 @@
 #pragma mark - TextField Delegates
 
 // This method is called once we click inside the textField
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"Text field did begin editing");
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.currentResponder = textField;
 }
 
 // This method is called once we complete editing
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    NSLog(@"Text field ended editing");
+    self.currentResponder = nil;
     
 }
 
 // This method enables or disables the processing of return key
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
-    return YES;
+    return NO;
 }
+
+
+
 
 - (void)buttonPressed:(UIButton *)button {
     NSLog(@"Button Pressed");
     
     
-    
+}
+
+- (void)resignOnTap:(id)iSender {
+    [self.currentResponder resignFirstResponder];
 }
 
 -(IBAction)showMessage{

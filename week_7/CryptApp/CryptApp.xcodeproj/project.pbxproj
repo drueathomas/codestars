@@ -245,9 +245,11 @@
 				TargetAttributes = {
 					E307E4181BADF2D100FF1979 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Y2S8QC4RA3;
 					};
 					E307E4311BADF2D200FF1979 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Y2S8QC4RA3;
 						TestTargetID = E307E4181BADF2D100FF1979;
 					};
 				};
@@ -459,6 +461,8 @@
 		E307E4401BADF2D200FF1979 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -472,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptApp.app/CryptApp";
 			};
 			name = Debug;
@@ -479,6 +484,8 @@
 		E307E4411BADF2D200FF1979 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -488,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptApp.app/CryptApp";
 			};
 			name = Release;
