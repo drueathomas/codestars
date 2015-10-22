@@ -18,25 +18,21 @@
 @implementation CipherTableViewController
 {
     
-    //holds all of the active ciphers
+    
     NSMutableArray *allCiphers;
-    
-    //holds current ciphers name
-   NSString *currentCipherName;
-//    NSString *currentCipherImage;
-    
-//    //holds current cipher name and image
+    NSString *currentCipherName;
+    int currentCipherIndex;
     NSDictionary *currentCipherData;
-    NSMutableArray *cipherNames;
-   // NSMutableArray *cipherImages;
+    
 }
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
-    allCiphers = [NSMutableArray arrayWithObjects:[[SharedCipher sharedInstance] getCiphers], nil];
+    allCiphers = [[SharedCipher sharedInstance] getCiphers];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -57,12 +53,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return [allCiphers count];
 }
 
@@ -75,12 +71,12 @@
     
     CipherTableViewCell *cell = (CipherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
+    currentCipherData = [allCiphers objectAtIndex:indexPath.row];
     
     
+    cell.cipherNameLabel.text =[[allCiphers objectAtIndex:indexPath.row]objectForKey:@"name"];
+    cell.thumbnailImageView.image = [UIImage imageNamed:@"padlock-open.png"];
     
-    cell.cipherNameLabel.text = currentCipherData [@"name"][indexPath.row];
-    
-    cell.thumbnailImageView.image = [UIImage imageNamed:[allCiphers objectForKey:currentCipherImage]];
     return cell;
 }
 /*
@@ -128,7 +124,7 @@ if([segue.identifier isEqualToString: @"showDetailView"]){
     
     DetailCipherTableViewController *dest = segue.destinationViewController;
     
-    dest.cipherName = [cipherNames objectAtIndex:indexPath.row];
+    dest.cipherName = [[allCiphers objectAtIndex:indexPath.row]objectForKey:@"name"];
     
 }
 }

@@ -7,6 +7,7 @@
 //
 
 #import "Encoder.h"
+#import "SavedCiphers.h"
 
 
 @implementation Encoder
@@ -235,7 +236,7 @@
     
     NSString *result = [self arrayToString];
     
-    [self saveCipher:name];
+    
     
     
     NSLog(@"%@", result);
