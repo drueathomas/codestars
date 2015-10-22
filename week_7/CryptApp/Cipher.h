@@ -14,8 +14,9 @@
 @property (nonatomic) NSMutableDictionary *dict;
 
 
-- (NSMutableDictionary *) updateCipher;
-- (id)initWithName:(NSString*)name andCipherDict: (NSMutableDictionary *) dict;
+
+//- (NSMutableDictionary *) updateCipher;
+//- (id)initWithName:(NSString*)name andCipherDict: (NSMutableDictionary *) dict;
 
 @end
 

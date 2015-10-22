@@ -16,6 +16,7 @@
 
 @end
 @implementation Cipher
+
 - (id)initWithName:(NSString*)name andCipherDict: (NSMutableDictionary *) dict{
     
     self = [super init];

@@ -272,6 +272,7 @@
     
     NSString *result = [self arrayToString];
     
+    [[SharedCipher sharedInstance] addCipher:[[Cipher alloc]updateCipher] atIndex:index];
     
     NSLog(@"%@", result);
 

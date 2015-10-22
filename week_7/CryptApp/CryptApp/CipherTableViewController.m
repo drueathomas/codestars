@@ -50,7 +50,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addCipher:(Encoder*)cipher atIndex:(int)index
+- (void)addCipher:(Cipher*)cipher atIndex:(int)index
 {
     [[SharedCipher sharedInstance] addCipher:cipher atIndex:index];
     currentCipherIndex = index;
