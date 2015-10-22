@@ -14,6 +14,7 @@
 
 @interface DetailCipherViewController (){
     Encoder *c1;
+
 }
 
 @end
@@ -22,8 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Encoder *c1 = [[Encoder alloc] init];
-    self.cipherNameLabel.text = self.cipherName;
+        self.cipherNameLabel.text = self.cipherName;
     self.userInput = self.alterTextView.text;
     
     [self.view addSubview:self.decodeButton];
@@ -41,17 +41,15 @@
     
     self.cipherName = name;
     
-    
-    Encoder *c = [[Encoder alloc] init];
     self.cipher = cipher;
     
-    [c userInputToChars: userInput];
+    [c1 userInputToChars: userInput];
     
-    [c cipherCharsToStandardKeys];
+    [c1 cipherCharsToStandardKeys];
     
-    [c standardKeysToChars];
+    [c1 standardKeysToChars];
     
-    NSString *result = [c arrayToString];
+    NSString *result = [c1 arrayToString];
     
     NSLog(@"%@", result);
     
@@ -82,8 +80,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    NSMutableArray *allCiphers = [[SharedCipher sharedInstance] getCiphers];
     NSMutableDictionary *storedCipher = [NSMutableDictionary dictionary];
+
+    NSMutableArray *allCiphers = [[SharedCipher sharedInstance] getCiphers];
+    
     
     [c1 generateStandardAlphabet];
     
@@ -96,9 +96,10 @@
            storedCipher = dict;
     }
     
+    NSLog(@"STORED DICTIONARY: %@", storedCipher);
 
     if ([segue.identifier isEqualToString:@"showEncodedText"]) {
-        self.encodedText = [c1 encodeUserInput:self.userInput forCipher:storedCipher withName:self.cipherName];
+        self.encodedText = [c1 encodeUserInput:_userInput forCipher:storedCipher withName:_cipherName];
         
         EncodedTextViewController *encodedViewController = segue.destinationViewController;
         encodedViewController.myText = self.encodedText;
