@@ -14,14 +14,14 @@
 		E307E42D1BADF2D200FF1979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E307E42B1BADF2D200FF1979 /* LaunchScreen.xib */; };
 		E307E4391BADF2D200FF1979 /* CryptAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4381BADF2D200FF1979 /* CryptAppTests.m */; };
 		E307E4471BADFB5200FF1979 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E307E4461BADFB5200FF1979 /* Encoder.m */; };
+		E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F61BD8925D00729277 /* SharedCipher.m */; settings = {ASSET_TAGS = (); }; };
+		E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */ = {isa = PBXBuildFile; fileRef = E31EE4F91BD8929200729277 /* SavedCiphers.m */; settings = {ASSET_TAGS = (); }; };
 		E322C6891BBD08AF001B58ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E322C6871BBD08AD001B58ED /* Main.storyboard */; };
 		E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C30E1BD246B300D229A0 /* CipherTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C3111BD2475F00D229A0 /* CipherTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		E328C3181BD24DD400D229A0 /* Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C3171BD24DD400D229A0 /* Decoder.m */; settings = {ASSET_TAGS = (); }; };
 		E328C31B1BD24E1D00D229A0 /* DecodeTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E328C31A1BD24E1D00D229A0 /* DecodeTextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E389F9ED1BB8958A00EA96A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */; };
-		E38BD4341BD2C225008B1E2B /* CipherSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E38BD4331BD2C225008B1E2B /* CipherSingleton.m */; settings = {ASSET_TAGS = (); }; };
-		E38BD4371BD2CDE7008B1E2B /* Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E38BD4361BD2CDE7008B1E2B /* Cipher.m */; settings = {ASSET_TAGS = (); }; };
 		E38BD43A1BD2D2B1008B1E2B /* DetailCipherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38BD4391BD2D2B1008B1E2B /* DetailCipherTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -50,6 +50,10 @@
 		E307E4381BADF2D200FF1979 /* CryptAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptAppTests.m; sourceTree = "<group>"; };
 		E307E4451BADFB5200FF1979 /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
 		E307E4461BADFB5200FF1979 /* Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encoder.m; sourceTree = "<group>"; };
+		E31EE4F51BD8925D00729277 /* SharedCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedCipher.h; path = ../SharedCipher.h; sourceTree = "<group>"; };
+		E31EE4F61BD8925D00729277 /* SharedCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedCipher.m; path = ../SharedCipher.m; sourceTree = "<group>"; };
+		E31EE4F81BD8929200729277 /* SavedCiphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedCiphers.h; path = ../SavedCiphers.h; sourceTree = "<group>"; };
+		E31EE4F91BD8929200729277 /* SavedCiphers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedCiphers.m; path = ../SavedCiphers.m; sourceTree = "<group>"; };
 		E322C6881BBD08AE001B58ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E328C30D1BD246B300D229A0 /* CipherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherTableViewController.h; sourceTree = "<group>"; };
 		E328C30E1BD246B300D229A0 /* CipherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherTableViewController.m; sourceTree = "<group>"; };
@@ -61,10 +65,6 @@
 		E328C31A1BD24E1D00D229A0 /* DecodeTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodeTextViewController.m; sourceTree = "<group>"; };
 		E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		E38BD4321BD2C225008B1E2B /* CipherSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherSingleton.h; sourceTree = "<group>"; };
-		E38BD4331BD2C225008B1E2B /* CipherSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherSingleton.m; sourceTree = "<group>"; };
-		E38BD4351BD2CDE7008B1E2B /* Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cipher.h; sourceTree = "<group>"; };
-		E38BD4361BD2CDE7008B1E2B /* Cipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cipher.m; sourceTree = "<group>"; };
 		E38BD4381BD2D2B0008B1E2B /* DetailCipherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCipherTableViewController.h; sourceTree = "<group>"; };
 		E38BD4391BD2D2B1008B1E2B /* DetailCipherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCipherTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,18 +110,18 @@
 		E307E41B1BADF2D100FF1979 /* CryptApp */ = {
 			isa = PBXGroup;
 			children = (
+				E31EE4F51BD8925D00729277 /* SharedCipher.h */,
+				E31EE4F61BD8925D00729277 /* SharedCipher.m */,
+				E31EE4F81BD8929200729277 /* SavedCiphers.h */,
+				E31EE4F91BD8929200729277 /* SavedCiphers.m */,
 				E307E4201BADF2D200FF1979 /* AppDelegate.h */,
 				E307E4211BADF2D200FF1979 /* AppDelegate.m */,
 				E389F9EB1BB8958A00EA96A6 /* HomeViewController.h */,
 				E389F9EC1BB8958A00EA96A6 /* HomeViewController.m */,
 				3EA8D54C1BD005BB00DB54EE /* EncodedTextViewController.h */,
 				3EA8D54D1BD005BB00DB54EE /* EncodedTextViewController.m */,
-				E38BD4351BD2CDE7008B1E2B /* Cipher.h */,
-				E38BD4361BD2CDE7008B1E2B /* Cipher.m */,
 				E307E4451BADFB5200FF1979 /* Encoder.h */,
 				E307E4461BADFB5200FF1979 /* Encoder.m */,
-				E38BD4321BD2C225008B1E2B /* CipherSingleton.h */,
-				E38BD4331BD2C225008B1E2B /* CipherSingleton.m */,
 				E328C3191BD24E1D00D229A0 /* DecodeTextViewController.h */,
 				E328C31A1BD24E1D00D229A0 /* DecodeTextViewController.m */,
 				E328C30D1BD246B300D229A0 /* CipherTableViewController.h */,
@@ -271,11 +271,11 @@
 				3EA8D54E1BD005BB00DB54EE /* EncodedTextViewController.m in Sources */,
 				E328C3181BD24DD400D229A0 /* Decoder.m in Sources */,
 				E328C30F1BD246B300D229A0 /* CipherTableViewController.m in Sources */,
-				E38BD4341BD2C225008B1E2B /* CipherSingleton.m in Sources */,
+				E31EE4F71BD8925D00729277 /* SharedCipher.m in Sources */,
 				E328C31B1BD24E1D00D229A0 /* DecodeTextViewController.m in Sources */,
 				E328C3121BD2475F00D229A0 /* CipherTableViewCell.m in Sources */,
+				E31EE4FA1BD8929200729277 /* SavedCiphers.m in Sources */,
 				E307E41F1BADF2D200FF1979 /* main.m in Sources */,
-				E38BD4371BD2CDE7008B1E2B /* Cipher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

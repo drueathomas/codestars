@@ -283,16 +283,6 @@
 
 }
 
-+ (id<EncoderProtocol>)sharedInstance {
-    // Retrieve class name from a config file or inject it...
-    static NSString *className = @"Encoder";
-    static dispatch_once_t once;
-    static id<EncoderProtocol> instance;
-    dispatch_once(&once, ^{
-        instance = [[NSClassFromString(className) alloc] init];
-    });
-    return instance;
-}
 
 @end
 
