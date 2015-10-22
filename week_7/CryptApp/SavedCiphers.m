@@ -97,7 +97,7 @@
     
 }
 
-- (void)addCipher:(Encoder*)cipher atIndex:(int)index
+- (void)addCipher:(Cipher*)cipher atIndex:(int)index
 {
     
     if(ciphers.count >= index)

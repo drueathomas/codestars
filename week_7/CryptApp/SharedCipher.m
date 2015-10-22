@@ -50,7 +50,7 @@
     return [savedCiphers getCiphers];
 }
 
-- (void)addCipher:(Encoder*)cipher atIndex:(int)index
+- (void)addCipher:(Cipher*)cipher atIndex:(int)index
 {
     
     [savedCiphers addCipher:cipher atIndex:index];

@@ -8,6 +8,7 @@
 
 #import "Encoder.h"
 #import "SharedCipher.h"
+#import "Cipher.h"
 
 
 @implementation Encoder
@@ -61,6 +62,8 @@
      }
     
     NSLog(@"%@", self.cipher);
+    
+   
 }
 
 - (void) userInputToChars : (NSString *) userInput {
@@ -226,6 +229,17 @@
     return result;
 }
 
+
+
+- (NSMutableDictionary *) updateCipher{
+    
+    
+    self.cipher = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.cipherName, @"name", self.cipher, @"cipher", nil];
+    return self.cipher;
+}
+
+
+
 - (NSString *) encodeUserInput : (NSString *) userInput :  (NSString *) name{
     
     [self userInputToChars: userInput];
@@ -235,7 +249,8 @@
     [self cipherKeysToChars];
     
     NSString *result = [self arrayToString];
-    
+   
+    self.cipher = [self updateCipher];
     
     
     
@@ -244,6 +259,8 @@
     return result;
     
     }
+
+
 
 -(NSString *) decodeUserInput : (NSString *) userInput : (NSString *) name{
     
@@ -255,7 +272,6 @@
     
     NSString *result = [self arrayToString];
     
-    [self saveCipher:name];
     
     NSLog(@"%@", result);
 
@@ -286,8 +302,6 @@
     
 
 }
-
-- (void) 
 
 
 @end

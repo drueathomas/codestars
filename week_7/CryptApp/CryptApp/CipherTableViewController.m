@@ -56,6 +56,7 @@
     currentCipherIndex = index;
     
 }
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:
 (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {

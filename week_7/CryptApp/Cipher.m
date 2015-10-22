@@ -8,8 +8,14 @@
 
 #import "Cipher.h"
 
-@implementation Cipher
+@interface Cipher (){
+     Cipher* c;
+    NSMutableDictionary *cipher;
+    
+}
 
+@end
+@implementation Cipher
 - (id)initWithName:(NSString*)name andCipherDict: (NSMutableDictionary *) dict{
     
     self = [super init];
@@ -17,8 +23,19 @@
     {
         _name = name;
         _dict = dict;
+   
+        
     }
     return self;
 }
 
+- (NSMutableDictionary *) updateCipher{
+    
+  
+   cipher = [NSMutableDictionary dictionaryWithObjectsAndKeys:_name, @"name", _dict, @"cipher", nil];
+    return cipher;
+}
+
 @end
+
+

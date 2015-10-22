@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Encoder.h"
+#import "Cipher.h"
 
 @interface SharedCipher : NSObject
 
@@ -15,7 +15,7 @@
 
 - (NSMutableArray*)getCiphers;
 
-- (void)addCipher:(Encoder*)cipher atIndex:(int)index;
+- (void)addCipher:(Cipher*)cipher atIndex:(int)index;
 
 - (void)deleteCipherAtIndex:(int)index;
 
